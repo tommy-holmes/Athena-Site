@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Athena is a powerful AI-powered, privacy-centric chat app for iOS devices and Mac that offers offline mode, multiple conversations and an intuitive user interface.">
+  <meta name="keywords" content="Athena, Athena App, The Athena App, ChatGPT, AI chat, iOS app, Mac app, iPhone, iPad, Mac, Apple, Native app">
+  <meta name="image" content="https://theathena.app/static/MetaImage.jpeg">
+  <meta name="author" content="Athena AI Ltd">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+
+  <link href="dist/output.css" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="static/android-chrome-512x512.png">
+
+  <style>
+   :root {
+            --sans-serif: ui-rounded, -apple-system, BlinkMacSystemFont, "Open Sans", "Segoe UI", Roboto, Ubuntu, sans-serif;
+            font-family:var(--sans-serif)
+        } 
+    blockquote {
+      font-style: normal !important;
+    }
+    #download {
+      cursor: pointer;
+    }
+    .secondary-btn {
+      cursor: pointer;
+      display: block;
+      padding: 4px 10px;
+    }
+    .secondary-btn:hover {
+      /* text-decoration: underline; */
+      border-radius: 6px;
+      background-color: rgba(158, 163, 174, 0.3);
+      color: rgb(90, 175, 196);
+      transition-property: color, background-color;
+      transition-duration: 0.3s;
+    }
+    .watch {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: rgb(90, 175, 196);
+    }
+    .watch:hover {
+      border-radius: 6px;
+      background-color: rgba(158, 163, 174, 0.3);
+      transition-property: color, background-color;
+      transition-duration: 0.3s;
+    }
+    @media (min-width: 640px) { 
+      .card {
+        transition: transform 0.1s ease-out;
+    }
+      .card:hover {
+        transform: scale(1.05);
+    }
+    }
+    @media (prefers-color-scheme: dark) {
+      .watch {
+        color: rgb(106, 196, 221);
+      }
+      .secondary-btn:hover {
+        color: rgb(106, 196, 221);
+      }
+    }
+  </style>
+
+  <title>Athena</title>
+  
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-R2HCCDXHJM"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-R2HCCDXHJM');
+</script>
+</head>
+
+<body class="text-black bg-egg dark:bg-carbon dark:text-white">
+  <div class="container mx-auto px-4 py-12">
+    <header class="flex top-0 p-5 backdrop-blur bg-egg/90 dark:bg-carbon/90 sticky items-center justify-between">
+      <a href="#" class="text-2xl font-bold">Athena</a>
+      <nav>
+        <ul class="hidden items-center space-x-2 md:flex">
+            <li><a id="demo" class="text-gray-400 secondary-btn" onclick="scrollToSection('demoSection')">Demo</a></li>
+          <li><a id="features" class="text-gray-400 secondary-btn" onclick="scrollToSection('featuresSection')">Features</a></li>
+          <li><a href="downloads/athena-presskit.zip" download class="text-gray-400 secondary-btn">Press Kit</a></li>
+          <li><a id="download" class="text-white font-semibold py-2 px-4 ml-4 rounded-full bg-darkTeal" onclick="scrollToSection('downloadSection')">Download</a></li>
+        </ul>
+
+        <div class="md:hidden">
+          <button class="navbar-burger flex">
+            <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-6 h-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Side burger menu -->
+    <div>
+      <div class="navbar-menu relative z-50 hidden">
+        <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
+        <nav class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-egg dark:bg-carbon overflow-y-auto">
+          <div class="flex items-center space-x-40 mb-8">
+              <a href="#" class="text-2xl font-bold">Athena</a>
+            <button class="navbar-close">
+              <svg class="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+              </svg>
+            </button>
+          </div>
+          <div>
+            <ul>
+              <li class="mb-8 navbar-close"><a id="demo" class="text-gray-400 text-2xl" onclick="scrollToSection('demoSection')">Demo</a></li>
+              <li class="mb-8 navbar-close"><a id="features" class="text-gray-400 text-2xl" onclick="scrollToSection('featuresSection')">Features</a></li>
+              <li class="mb-8 navbar-close"><a href="downloads/athena-presskit.zip" download class="text-gray-400 text-2xl">Press Kit</a></li>
+              <li><a id="download" class="text-white font-semibold text-2xl navbar-close py-2 px-4 rounded-full bg-darkTeal" onclick="scrollToSection('downloadSection')">Download</a></li>
+            </ul>
+          </div>
+    </div>
+
+    <main class="mt-20 max-w-screen-sm p-1 md:max-w-screen-2xl m-5 mt-0 md:m-5 mt-0">
+      <section class="md:mt-12">
+        <div class="text-center">
+          <h1 class="text-5xl font-bold mb-6">Meet Athena.</h1>
+          <h1 class="text-2xl font-bold mb-6 text-gray-400">Elevate your AI experience on iOS and Mac</h1>
+          <a id="download" class="text-white font-semibold text-xl py-2 px-4 rounded-full bg-darkTeal md:hidden" onclick="scrollToSection('downloadSection')">Download</a>
+        </div>
+      </section>
+
+      <section>
+        <div class="justify-center mt-10 mb-10 space-y-4 md:flex md:space-x-4">
+            <img src="static/X Device - Hero 1 - Light.png" class="w-7/8 dark:hidden">
+            <img src="static/X Device - Hero 1 - Dark.png" class="w-7/8 hidden dark:block">
+        </div>
+      </section>
+
+
+      <section id="demoSection" class="mb-20 mt-12 flex justify-center md:m-20">
+        <div id="play" class="text-center text-2xl">
+          <a class="text-teal font-semibold watch md:pl-6 md:pr-6 md:pt-1 md:pb-1" style="cursor: pointer; white-space: nowrap;">
+            <img src="static/play.svg" class="max-h-8 mr-1">
+            Watch introduction video
+          </a>
+        </div>
+
+        <div id="demoVideo" style="display: none;">
+          <video autoplay loop controls muted src="static/Athena iOS Demo.mov"></video>
+        </div>
+      </section>
+
+
+      <section>
+        <div class="md:m-20 md:mb-8 lg:grid lg:grid-cols-2 lg:gap-4 lg:place-content-center">
+          <div class="prose prose-quoteless md:m-4">
+            <blockquote class="border-l-teal dark:border-l-darkModeTeal" style="border-width: 0 0 0 4px;">
+              <p class="text-2xl font-bold mb-3 text-teal dark:text-darkModeTeal">Can you tackle my most pressing questions?</p>
+              <p class="mt-1 mb-12 dark:text-white md:mb-0 col-span-2"><b>Athena</b> can provide information on a variety of topics, such as history, science, technology, and more.</p>
+            </blockquote>
+          </div>
+          <div class="prose prose-quoteless md:m-4">
+            <blockquote class="border-l-teal dark:border-l-darkModeTeal" style="border-width: 0 0 0 4px;">
+              <p class="text-2xl font-bold mb-3 text-teal dark:text-darkModeTeal">Could you assist me with brainstorming ideas?</p>
+              <p class="mt-1 mb-12 dark:text-white md:mb-0 col-span-2"><b>Athena</b> can help generate ideas for projects, stories, or other creative endeavors.</p>
+            </blockquote>
+          </div>
+          <div class="prose prose-quoteless md:m-4">
+            <blockquote class="border-l-teal dark:border-l-darkModeTeal" style="border-width: 0 0 0 4px;">
+              <p class="text-2xl font-bold mb-3 text-teal dark:text-darkModeTeal">Could you provide suggestions for me?</p>
+              <p class="mt-1 mb-12 dark:text-white md:mb-0 col-span-2"><b>Athena</b> can suggest books, movies, music, cooking recipes, or anything else based on your preferences.</p>
+            </blockquote>
+          </div>
+          <div class="prose prose-quoteless md:m-4">
+            <blockquote class="border-l-teal dark:border-l-darkModeTeal" style="border-width: 0 0 0 4px;">
+              <p class="text-2xl font-bold mb-3 text-teal dark:text-darkModeTeal">Can you help with personal finance?</p>
+              <p class="mt-1 mb-12 dark:text-white md:mb-0 col-span-2"><b>Athena</b> can provide guidance on budgeting, saving, investing, and managing finances.</p>
+            </blockquote>
+          </div>
+          <div class="prose prose-quoteless md:m-4">
+            <blockquote class="border-l-teal dark:border-l-darkModeTeal" style="border-width: 0 0 0 4px;">
+              <p class="text-2xl font-bold mb-3 text-teal dark:text-darkModeTeal">Would you elevate my writing to new heights?</p>
+              <p class="mt-1 mb-12 dark:text-white md:mb-0 col-span-2"><b>Athena</b> can assist with writing or editing essays, articles, stories, or other content.</p>
+            </blockquote>
+          </div>
+          <div class="prose prose-quoteless md:m-4">
+            <blockquote class="border-l-teal dark:border-l-darkModeTeal" style="border-width: 0 0 0 4px;">
+              <p class="text-2xl font-bold mb-3 text-teal dark:text-darkModeTeal">Could you craft unforgettable travel experiences for me?</p>
+              <p class="mt-1 mb-12 dark:text-white md:mb-0 col-span-2"><b>Athena</b> can help with researching destinations, finding accommodations, and creating itineraries.</p>
+            </blockquote>
+          </div>
+          <div class="prose prose-quoteless md:m-4">
+            <blockquote class="border-l-teal dark:border-l-darkModeTeal" style="border-width: 0 0 0 4px;">
+              <p class="text-2xl font-bold mb-3 text-teal dark:text-darkModeTeal">Can you help steer me towards a better career path?</p>
+              <p class="mt-1 mb-12 dark:text-white md:mb-0 col-span-2"><b>Athena</b> can offer suggestions on career paths, job hunting strategies, and interview preparation.</p>
+            </blockquote>
+          </div>
+          <div class="prose prose-quoteless md:m-4">
+            <blockquote class="border-l-teal dark:border-l-darkModeTeal" style="border-width: 0 0 0 4px;">
+              <p class="text-2xl font-bold mb-3 text-teal dark:text-darkModeTeal">Would you be my pair programer?</p>
+              <p class="mt-1 mb-12 dark:text-white md:mb-0 col-span-2"><b>Athena</b> can provide guidance on programming concepts and help with code debugging or optimization.</p>
+            </blockquote>
+          </div>
+          </div>
+
+        <h1 class="text-center text-5xl font-bold mb-16">Just <b class="text-teal  dark:text-darkModeTeal">#AskAthena</b></h1>
+      </div>
+      </section>
+
+      <section id="demoSection">
+        <div class="flex md:justify-center">
+            <div class="ml-5 mr-5">
+
+                <div class="space-y-8">
+                    <div class="space-y-1">
+                        <h3 class="text-2xl font-bold">Native look and feel</h3>
+                        <p>
+                            Experience seamless integration with iOS, thanks to Athena's native design that fits perfectly with your iPhone and iPad. Enjoy smooth navigation and familiar gestures for an unparalleled user experience.
+                        </p>
+                    </div>
+                    <div class="space-y-1">
+                        <h3 class="text-2xl font-bold">Dark mode support</h3>
+                        <p>
+                            Protect your eyes and enhance your focus with Athena's built-in dark mode support. Whether you're working late or simply prefer a darker aesthetic, our app adapts to your preferences.
+                        </p>
+                    </div>
+                    <div class="space-y-1">
+                        <h3 class="text-2xl font-bold">Unrivaled in the iOS and macOS AI chat space</h3>
+                        <p>
+                            Athena sets a new standard for AI chat apps on iOS. With its combination of advanced features, sleek design, and powerful performance, no other app comes close to delivering the same level of quality and convenience.
+                        </p>
+                    </div>
+                    <div class="space-y-1">
+                      <h3 class="text-2xl font-bold">Fully accessible</h3>
+                      <p>
+                          Athena supports resizable text for an easy reading experience, dictation for voice control, haptic feedback for the hard of hearing and sound chimes. 
+                      </p>
+                  </div>
+                </div>
+            </div>
+          </div>
+      </section>
+
+      <section id="featuresSection" class="mt-16 text-center">
+        <h2 class="text-4xl font-bold mb-4">More than a pretty (inter)face</h2>
+        
+        <div class="grid grid-cols-1 ml-5 mr-5 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="feature">
+            <div class="flex justify-center">
+              <img src="static/cpu.svg" class="h-36 m-10">
+            </div>
+            <h3 class="text-2xl font-semibold mb-2">Offline mode</h3>
+            <p>Easily browse your previous conversations even while offline.</p>
+          </div>
+          <div class="feature">
+            <div class="flex justify-center">
+              <img src="static/lock.svg" class="h-36 m-10">
+            </div>
+            <h3 class="text-2xl font-semibold mb-2">Private</h3>
+            <p>Our privacy-centric app safeguards your personal data, ensuring it remains on your device.</p>
+          </div>
+          <div class="feature">
+            <div class="flex justify-center">
+              <img src="static/text.svg" class="h-36 m-10">
+            </div>
+            <h3 class="text-2xl font-semibold mb-2">Markdown support</h3>
+            <p>Response text is fully formatted with markdown.</p>
+          </div>
+          <div class="feature">
+            <div class="flex justify-center">
+              <img src="static/chats.svg" class="h-36 m-10">
+            </div>
+            <h3 class="text-2xl font-semibold mb-2">Multiple topics</h3>
+            <p>Effortlessly handle multiple topics simultaneously and retain history on your device.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="m-1 mt-32 mb-14 text-center">
+        <h2 class="text-2xl font-bold mb-6">
+          New features: arriving soon!
+      </h2>
+      <div class="grid grid-cols-1 ml-5 mr-5 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="feature">
+          <div class="flex justify-center">
+            <img src="static/cloud.svg" class="h-36 m-10">
+          </div>
+          <h3 class="text-2xl font-semibold mb-2">iCloud sync</h3>
+          <p>Have all your conversations synced across all your devices.</p>
+        </div>
+        <div class="feature">
+          <div class="flex justify-center">
+            <img src="static/desktop.svg" class="h-36 m-10">
+          </div>
+          <h3 class="text-2xl font-semibold mb-2">Menu bar integration</h3>
+          <p>Swift access, seamless workflow, elevated AI experience on Mac.</p>
+        </div>
+        <div class="feature">
+          <div class="flex justify-center">
+            <img src="static/bulb.svg" class="h-36 m-10">
+          </div>
+          <h3 class="text-2xl font-semibold mb-2">Prompts library</h3>
+          <p>A rich library of premium prompts to get you the best result.</p>
+        </div>
+        <div class="feature">
+          <div class="flex justify-center">
+            <img src="static/code.svg" class="h-36 m-10">
+          </div>
+          <h3 class="text-2xl font-semibold mb-2">Shortcuts support</h3>
+          <p>Write your own Shortcuts to automate and elevate your Athena experience further.</p>
+        </div>
+      </div>
+      </section>
+
+      <section id="downloadSection" class="mt-20 mb-20 flex justify-center">
+        <div class="space-y-16">
+          <div class="text-center">
+            <h1 class="text-4xl font-bold mb-4">Get it now</h1>
+            <h1 class="text-1xl">Or become a beta tester through TestFlight and help shape the future of Athena.</h1>
+          </div>
+  
+          <div class="grid grid-cols-1 gap-1 space-y-4 md:grid-cols-3 md:space-x-4 md:space-y-0">
+  
+            <div class="text-center card dark:dark-card">
+              <div class="pl-8 pr-8">
+                <div class="flex justify-center">
+                  <img src="static/icon.jpeg" class="max-h-28 mb-6" style="border-radius: 1.5rem;">
+                </div>
+    
+                <div class="space-y-2">
+                  <h3 class="text-xl font-bold">Mac</h3>
+    
+                  <p>
+                    macOS 13.0 or later
+                  </p>
+                </div>
+    
+                <div class="mt-8 space-y-2">
+                  <div class="flex justify-center">
+                    <a href=""><img class="w-48" src="static/appstore.svg" alt="Get on the App Store"></a>
+                  </div>
+                  <div class="flex justify-center">
+                    <a href="https://testflight.apple.com/join/6CTjDWXw"><img class="w-48" src="static/testflight.svg" alt="Join the TestFlight"></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <div class="text-center card dark:dark-card">
+              <div class="flex justify-center">
+                <img src="static/icon.jpeg" class="max-h-28 mb-6" style="border-radius: 1.5rem;">
+              </div>
+  
+              <div class="space-y-2">
+                <h3 class="text-xl font-bold">iPhone</h3>
+  
+                <p>
+                  iOS 16.0 or later
+                </p>
+              </div>
+  
+              <div class="mt-8 space-y-2">
+                <div class="flex justify-center">
+                  <a href=""><img class="w-48" src="static/appstore.svg" alt="Get on the App Store"></a>
+                </div>
+                <div class="flex justify-center">
+                  <a href="https://testflight.apple.com/join/6CTjDWXw"><img class="w-48" src="static/testflight.svg" alt="Join the TestFlight"></a>
+                </div>
+              </div>
+            </div>
+  
+            <div class="text-center card dark:dark-card">
+              <div class="flex justify-center">
+                <img src="static/icon.jpeg" class="max-h-28 mb-6" style="border-radius: 1.5rem;">
+              </div>
+  
+              <div class="space-y-2">
+                <h3 class="text-xl font-bold">iPad</h3>
+  
+                <p>
+                  iPadOS 16.1 or later
+                </p>
+              </div>
+  
+              <div class="mt-8 space-y-2">
+                <div class="flex justify-center">
+                  <a href=""><img class="w-48" src="static/appstore.svg" alt="Get on the App Store"></a>
+                </div>
+                <div class="flex justify-center">
+                  <a href="https://testflight.apple.com/join/6CTjDWXw"><img class="w-48" src="static/testflight.svg" alt="Join the TestFlight"></a>
+                </div>
+              </div>
+            </div>
+  
+  
+          </div>
+        </div>
+      </section>
+
+      <div class="text-center space-y-4">
+        <p>
+          A
+          <a target="_blank" href="https://github.com/tommy-holmes" class="dark:text-white">
+            <u>Tom Holmes</u></a
+          >
+          and
+          <a target="_blank" href="https://benkau.com" class="dark:text-white">
+            <u>Shaps Benkau</u></a
+          >
+          Product © 2023 Athena AI, Ltd.
+        </p>
+
+        <p>
+          <a target="_blank" href="https://openai.com" class="text-sm text-gray-400 dark:text-gray-600">
+            POWERED BY OPENAI'S CHATGPT
+          </a>
+        </p>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    function scrollToSection(sectionID) {
+      document.getElementById(sectionID).scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+
+<script>
+  // Burger menus
+document.addEventListener('DOMContentLoaded', function() {
+    // open
+    const burger = document.querySelectorAll('.navbar-burger');
+    const menu = document.querySelectorAll('.navbar-menu');
+
+    document.getElementById("play").addEventListener("click", function() {
+      document.getElementById("demoVideo").style.display = "block";
+      document.getElementById("play").style.display = "none";
+    });
+
+    if (burger.length && menu.length) {
+        for (var i = 0; i < burger.length; i++) {
+            burger[i].addEventListener('click', function() {
+                for (var j = 0; j < menu.length; j++) {
+                    menu[j].classList.toggle('hidden');
+                }
+            });
+        }
+    }
+
+    // close
+    const close = document.querySelectorAll('.navbar-close');
+    const backdrop = document.querySelectorAll('.navbar-backdrop');
+
+    if (close.length) {
+        for (var i = 0; i < close.length; i++) {
+            close[i].addEventListener('click', function() {
+                for (var j = 0; j < menu.length; j++) {
+                    menu[j].classList.toggle('hidden');
+                }
+            });
+        }
+    }
+
+    if (backdrop.length) {
+        for (var i = 0; i < backdrop.length; i++) {
+            backdrop[i].addEventListener('click', function() {
+                for (var j = 0; j < menu.length; j++) {
+                    menu[j].classList.toggle('hidden');
+                }
+            });
+        }
+    }
+});
+  </script>
+</body>
+</html>
