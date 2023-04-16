@@ -51,6 +51,9 @@
       transition-property: color, background-color;
       transition-duration: 0.3s;
     }
+    .feature-card {
+      background-color: white;
+    }
     @media (min-width: 640px) { 
       .icon {
         transition: transform 0.1s ease-out;
@@ -67,6 +70,9 @@
       .secondary-btn:hover {
         color: rgb(106, 196, 221);
       }
+      .feature-card {
+      background-color: black;
+    }
     }
   </style>
 
@@ -263,31 +269,31 @@
       <section id="featuresSection" class="mt-16 text-center">
         <h2 class="text-4xl font-bold mb-4">More than a pretty (inter)face</h2>
         
-        <div class="grid grid-cols-1 ml-5 mr-5 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div class="feature">
+        <div class="grid grid-cols-1 ml-5 mr-5 mt-10 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div class="feature pl-4 pr-4 feature-card">
             <div class="flex justify-center">
-              <img src="static/cpu.svg" class="h-36 m-10">
+              <img src="static/cpu.svg" class="h-16 m-1 mb-8">
             </div>
             <h3 class="text-2xl font-semibold mb-2">Offline mode</h3>
             <p>Easily browse your previous conversations even while offline.</p>
           </div>
-          <div class="feature">
+          <div class="feature pl-4 pr-4 feature-card">
             <div class="flex justify-center">
-              <img src="static/lock.svg" class="h-36 m-10">
+              <img src="static/lock.svg" class="h-16 m-1 mb-8">
             </div>
             <h3 class="text-2xl font-semibold mb-2">Private</h3>
             <p>Our privacy-centric app safeguards your personal data, ensuring it remains on your device.</p>
           </div>
-          <div class="feature">
+          <div class="feature pl-4 pr-4 feature-card">
             <div class="flex justify-center">
-              <img src="static/text.svg" class="h-36 m-10">
+              <img src="static/text.svg" class="h-16 m-1 mb-8">
             </div>
             <h3 class="text-2xl font-semibold mb-2">Markdown support</h3>
             <p>Response text is fully formatted with markdown.</p>
           </div>
-          <div class="feature">
+          <div class="feature pl-4 pr-4 feature-card">
             <div class="flex justify-center">
-              <img src="static/chats.svg" class="h-36 m-10">
+              <img src="static/chats.svg" class="h-16 m-1 mb-8">
             </div>
             <h3 class="text-2xl font-semibold mb-2">Multiple topics</h3>
             <p>Effortlessly handle multiple topics simultaneously and retain history on your device.</p>
@@ -295,35 +301,35 @@
         </div>
       </section>
 
-      <section class="m-1 mt-32 mb-14 text-center">
+      <section class="m-1 mt-16 mb-14 text-center">
         <h2 class="text-2xl font-bold mb-6">
           New features: arriving soon!
       </h2>
-      <div class="grid grid-cols-1 ml-5 mr-5 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        <div class="feature">
+      <div class="grid grid-cols-1 ml-5 mr-5 mt-5 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="feature pl-4 pr-4 feature-card">
           <div class="flex justify-center">
-            <img src="static/cloud.svg" class="h-36 m-10">
+            <img src="static/cloud.svg" class="h-16 m-1 mb-8">
           </div>
           <h3 class="text-2xl font-semibold mb-2">iCloud sync</h3>
           <p>Have all your conversations synced across all your devices.</p>
         </div>
-        <div class="feature">
+        <div class="feature pl-4 pr-4 feature-card">
           <div class="flex justify-center">
-            <img src="static/desktop.svg" class="h-36 m-10">
+            <img src="static/desktop.svg" class="h-16 m-1 mb-8">
           </div>
           <h3 class="text-2xl font-semibold mb-2">Menu bar integration</h3>
           <p>Swift access, seamless workflow, elevated AI experience on Mac.</p>
         </div>
-        <div class="feature">
+        <div class="feature pl-4 pr-4 feature-card">
           <div class="flex justify-center">
-            <img src="static/bulb.svg" class="h-36 m-10">
+            <img src="static/bulb.svg" class="h-16 m-1 mb-8">
           </div>
           <h3 class="text-2xl font-semibold mb-2">Prompts library</h3>
           <p>A rich library of premium prompts to get you the best result.</p>
         </div>
-        <div class="feature">
+        <div class="feature pl-4 pr-4 feature-card">
           <div class="flex justify-center">
-            <img src="static/code.svg" class="h-36 m-10">
+            <img src="static/code.svg" class="h-16 m-1 mb-8">
           </div>
           <h3 class="text-2xl font-semibold mb-2">Shortcuts support</h3>
           <p>Write your own Shortcuts to automate and elevate your Athena experience further.</p>

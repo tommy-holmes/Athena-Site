@@ -15,4 +15,9 @@
       padding: theme('spacing.6');
       box-shadow: theme('boxShadow.xl');
     }
+    .feature-card {
+      background-color: '#fffff';
+      border-radius: theme('borderRadius.2xl');
+      padding: theme('spacing.6');
+    }
   }
