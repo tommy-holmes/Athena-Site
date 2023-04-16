@@ -1027,6 +1027,10 @@ video {
   position: fixed;
 }
 
+.absolute {
+  position: absolute;
+}
+
 .relative {
   position: relative;
 }
@@ -1039,6 +1043,36 @@ video {
   inset: 0px;
 }
 
+.inset-x-0 {
+  left: 0px;
+  right: 0px;
+}
+
+.inset-x-8 {
+  left: 2rem;
+  right: 2rem;
+}
+
+.inset-y-8 {
+  top: 2rem;
+  bottom: 2rem;
+}
+
+.inset-y-1 {
+  top: 0.25rem;
+  bottom: 0.25rem;
+}
+
+.inset-y-2 {
+  top: 0.5rem;
+  bottom: 0.5rem;
+}
+
+.-inset-y-2 {
+  top: -0.5rem;
+  bottom: -0.5rem;
+}
+
 .bottom-0 {
   bottom: 0px;
 }
@@ -1049,6 +1083,14 @@ video {
 
 .top-0 {
   top: 0px;
+}
+
+.bottom-8 {
+  bottom: 2rem;
+}
+
+.bottom-6 {
+  bottom: 1.5rem;
 }
 
 .z-50 {
@@ -1302,6 +1344,10 @@ video {
   border-radius: 9999px;
 }
 
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+
 .border-l-teal {
   --tw-border-opacity: 1;
   border-left-color: rgb(90 175 196 / var(--tw-border-opacity));
@@ -1332,6 +1378,14 @@ video {
 
 .p-5 {
   padding: 1.25rem;
+}
+
+.p-10 {
+  padding: 2.5rem;
+}
+
+.p-2 {
+  padding: 0.5rem;
 }
 
 .px-4 {
@@ -1365,6 +1419,30 @@ video {
 
 .pr-8 {
   padding-right: 2rem;
+}
+
+.pl-2 {
+  padding-left: 0.5rem;
+}
+
+.pr-2 {
+  padding-right: 0.5rem;
+}
+
+.pl-4 {
+  padding-left: 1rem;
+}
+
+.pr-4 {
+  padding-right: 1rem;
+}
+
+.pl-10 {
+  padding-left: 2.5rem;
+}
+
+.pr-10 {
+  padding-right: 2.5rem;
 }
 
 .text-center {
@@ -1483,6 +1561,11 @@ video {
     background-color: rgb(21 21 23 / 0.9);
   }
 
+  .dark\:text-darkModeTeal {
+    --tw-text-opacity: 1;
+    color: rgb(106 196 221 / var(--tw-text-opacity));
+  }
+
   .dark\:text-gray-600 {
     --tw-text-opacity: 1;
     color: rgb(75 85 99 / var(--tw-text-opacity));
@@ -1492,14 +1575,26 @@ video {
     --tw-text-opacity: 1;
     color: rgb(255 255 255 / var(--tw-text-opacity));
   }
-
-  .dark\:text-darkModeTeal {
-    --tw-text-opacity: 1;
-    color: rgb(106 196 221 / var(--tw-text-opacity));
-  }
 }
 
 @media (min-width: 768px) {
+  .md\:absolute {
+    position: absolute;
+  }
+
+  .md\:relative {
+    position: relative;
+  }
+
+  .md\:inset-x-0 {
+    left: 0px;
+    right: 0px;
+  }
+
+  .md\:bottom-6 {
+    bottom: 1.5rem;
+  }
+
   .md\:m-20 {
     margin: 5rem;
   }

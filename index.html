@@ -52,10 +52,11 @@
       transition-duration: 0.3s;
     }
     @media (min-width: 640px) { 
-      .card {
+      .icon {
         transition: transform 0.1s ease-out;
+        cursor: pointer;
     }
-      .card:hover {
+      .icon:hover {
         transform: scale(1.05);
     }
     }
@@ -333,8 +334,9 @@
       <section id="downloadSection" class="mt-20 mb-20 flex justify-center">
         <div class="space-y-16">
           <div class="text-center">
-            <h1 class="text-4xl font-bold mb-4">Get it now</h1>
-            <h1 class="text-1xl">Or become a beta tester through TestFlight and help shape the future of Athena.</h1>
+            <h1 class="text-4xl font-bold mb-4">Sign up for the waitlist</h1>
+            <h1 class="text-1xl">We can only take on a limited number of users for now, but for a chance to be one of the first to get to use Athena 
+              sign up for the waitlist.</h1>
           </div>
   
           <div class="grid grid-cols-1 gap-1 space-y-4 md:grid-cols-3 md:space-x-4 md:space-y-0">
@@ -342,7 +344,7 @@
             <div class="text-center card dark:dark-card">
               <div class="pl-8 pr-8">
                 <div class="flex justify-center">
-                  <img src="static/icon.jpeg" class="max-h-28 mb-6" style="border-radius: 1.5rem;">
+                  <a target="_blank" href="https://forms.gle/wnXEwfgA8n4j2cJ39"><img src="static/icon.jpeg" class="icon max-h-28 mb-6" style="border-radius: 1.5rem;"></a>
                 </div>
     
                 <div class="space-y-2">
@@ -354,58 +356,81 @@
                 </div>
     
                 <div class="mt-8 space-y-2">
-                  <div class="flex justify-center">
+                  <!-- <div class="flex justify-center">
                     <a href=""><img class="w-48" src="static/appstore.svg" alt="Get on the App Store"></a>
                   </div>
                   <div class="flex justify-center">
                     <a href="https://testflight.apple.com/join/6CTjDWXw"><img class="w-48" src="static/testflight.svg" alt="Join the TestFlight"></a>
+                  </div> -->
+
+                  <div class="flex justify-center">
+                    <a target="_blank" href="https://forms.gle/wnXEwfgA8n4j2cJ39" class="text-teal p-2 pl-4 pr-4 rounded-lg bg-gray-800 dark:text-darkModeTeal" style="cursor: pointer; background-color: rgba(158, 163, 174, 0.3); white-space: nowrap;">
+                      Join the waitlist
+                    </a>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+  
+            <div class="text-center card md:relative dark:dark-card">
+              <div class="pl-8 pr-8">
+                <div class="flex justify-center">
+                  <a target="_blank" href="https://forms.gle/wnXEwfgA8n4j2cJ39"><img src="static/icon.jpeg" class="icon max-h-28 mb-6" style="border-radius: 1.5rem;"></a>
+                </div>
+    
+                <div class="space-y-2">
+                  <h3 class="text-xl font-bold">iPhone</h3>
+    
+                  <p>
+                    iOS 16.0 or later
+                  </p>
+                </div>
+    
+                <div class="mt-8 space-y-2 md:absolute md:inset-x-0 md:bottom-6">
+                  <!-- <div class="flex justify-center">
+                    <a href=""><img class="w-48" src="static/appstore.svg" alt="Get on the App Store"></a>
+                  </div>
+                  <div class="flex justify-center">
+                    <a href="https://testflight.apple.com/join/6CTjDWXw"><img class="w-48" src="static/testflight.svg" alt="Join the TestFlight"></a>
+                  </div> -->
+  
+                  <div class="flex justify-center">
+                    <a target="_blank" href="https://forms.gle/wnXEwfgA8n4j2cJ39" class="text-teal p-2 pl-4 pr-4 rounded-lg bg-gray-800 dark:text-darkModeTeal" style="cursor: pointer; background-color: rgba(158, 163, 174, 0.3); white-space: nowrap;">
+                      Join the waitlist
+                    </a>
                   </div>
                 </div>
               </div>
             </div>
   
-            <div class="text-center card dark:dark-card">
-              <div class="flex justify-center">
-                <img src="static/icon.jpeg" class="max-h-28 mb-6" style="border-radius: 1.5rem;">
-              </div>
-  
-              <div class="space-y-2">
-                <h3 class="text-xl font-bold">iPhone</h3>
-  
-                <p>
-                  iOS 16.0 or later
-                </p>
-              </div>
-  
-              <div class="mt-8 space-y-2">
+            <div class="text-center card md:relative dark:dark-card">
+              <div class="pl-8 pr-8">
                 <div class="flex justify-center">
-                  <a href=""><img class="w-48" src="static/appstore.svg" alt="Get on the App Store"></a>
+                  <a target="_blank" href="https://forms.gle/wnXEwfgA8n4j2cJ39"><img src="static/icon.jpeg" class="icon max-h-28 mb-6" style="border-radius: 1.5rem;"></a>
                 </div>
-                <div class="flex justify-center">
-                  <a href="https://testflight.apple.com/join/6CTjDWXw"><img class="w-48" src="static/testflight.svg" alt="Join the TestFlight"></a>
+    
+                <div class="space-y-2">
+                  <h3 class="text-xl font-bold">iPad</h3>
+    
+                  <p>
+                    iPadOS 16.1 or later
+                  </p>
                 </div>
-              </div>
-            </div>
+    
+                <div class="mt-8 space-y-2 md:absolute md:inset-x-0 md:bottom-6">
+                  <!-- <div class="flex justify-center">
+                    <a href=""><img class="w-48" src="static/appstore.svg" alt="Get on the App Store"></a>
+                  </div>
+                  <div class="flex justify-center">
+                    <a href="https://testflight.apple.com/join/6CTjDWXw"><img class="w-48" src="static/testflight.svg" alt="Join the TestFlight"></a>
+                  </div> -->
   
-            <div class="text-center card dark:dark-card">
-              <div class="flex justify-center">
-                <img src="static/icon.jpeg" class="max-h-28 mb-6" style="border-radius: 1.5rem;">
-              </div>
-  
-              <div class="space-y-2">
-                <h3 class="text-xl font-bold">iPad</h3>
-  
-                <p>
-                  iPadOS 16.1 or later
-                </p>
-              </div>
-  
-              <div class="mt-8 space-y-2">
-                <div class="flex justify-center">
-                  <a href=""><img class="w-48" src="static/appstore.svg" alt="Get on the App Store"></a>
-                </div>
-                <div class="flex justify-center">
-                  <a href="https://testflight.apple.com/join/6CTjDWXw"><img class="w-48" src="static/testflight.svg" alt="Join the TestFlight"></a>
+                  <div class="flex justify-center">
+                    <a target="_blank" href="https://forms.gle/wnXEwfgA8n4j2cJ39" class="text-teal p-2 pl-4 pr-4 rounded-lg bg-gray-800 dark:text-darkModeTeal" style="cursor: pointer; background-color: rgba(158, 163, 174, 0.3); white-space: nowrap;">
+                      Join the waitlist
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
