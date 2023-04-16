@@ -1238,6 +1238,15 @@ video {
   max-height: 2rem;
 }
 
+.min-h-screen {
+  min-height: 100vh;
+}
+
+.min-h-min {
+  min-height: -moz-min-content;
+  min-height: min-content;
+}
+
 .w-48 {
   width: 12rem;
 }
