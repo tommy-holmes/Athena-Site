@@ -91,12 +91,13 @@
 
 <body class="text-black bg-egg dark:bg-carbon dark:text-white">
   <div class="container mx-auto px-4 py-12">
-    <header class="flex top-0 p-5 backdrop-blur bg-egg/90 dark:bg-carbon/90 sticky items-center justify-between">
+    <header class="flex top-0 p-5 backdrop-blur bg-egg/90 dark:bg-carbon/90 sticky z-10 items-center justify-between">
       <a href="#" class="text-2xl font-bold">Athena</a>
       <nav>
         <ul class="hidden items-center space-x-2 md:flex">
-            <li><a id="demo" class="text-gray-400 secondary-btn" onclick="scrollToSection('demoSection')">Demo</a></li>
+          <!-- <li><a id="demo" class="text-gray-400 secondary-btn" onclick="scrollToSection('demoSection')">Demo</a></li> -->
           <li><a id="features" class="text-gray-400 secondary-btn" onclick="scrollToSection('featuresSection')">Features</a></li>
+          <li><a id="follow" class="text-gray-400 secondary-btn" onclick="scrollToSection('socials')">Follow us</a></li>
           <li><a href="downloads/athena-presskit.zip" download class="text-gray-400 secondary-btn">Press Kit</a></li>
           <li><a id="download" class="text-white font-semibold py-2 px-4 ml-4 rounded-full bg-darkTeal" onclick="scrollToSection('downloadSection')">Download</a></li>
         </ul>
@@ -139,6 +140,7 @@
             <ul>
               <li class="mb-8 navbar-close"><a id="demo" class="text-gray-400 text-2xl" onclick="scrollToSection('demoSection')">Demo</a></li>
               <li class="mb-8 navbar-close"><a id="features" class="text-gray-400 text-2xl" onclick="scrollToSection('featuresSection')">Features</a></li>
+              <li class="mb-8 navbar-close"><a id="follow" class="text-gray-400 text-2xl" onclick="scrollToSection('socials')">Follow us</a></li>
               <li class="mb-8 navbar-close"><a href="downloads/athena-presskit.zip" download class="text-gray-400 text-2xl">Press Kit</a></li>
               <li><a id="download" class="text-white font-semibold text-2xl navbar-close py-2 px-4 rounded-full bg-darkTeal" onclick="scrollToSection('downloadSection')">Download</a></li>
             </ul>
