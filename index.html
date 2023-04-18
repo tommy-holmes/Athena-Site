@@ -34,24 +34,27 @@
     .secondary-btn:hover {
       /* text-decoration: underline; */
       border-radius: 6px;
-      background-color: rgba(158, 163, 174, 0.3);
-      color: rgb(90, 175, 196);
+      background-color: #eeeeee;
+      color: #03AEDC;
       transition-property: color, background-color;
       transition-duration: 0.3s;
+    }
+    .cta {
+      background-color: #eeeeee;
     }
     .watch {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      color: rgb(90, 175, 196);
+      color: #03AEDC;
     }
     .watch:hover {
       border-radius: 6px;
-      background-color: rgba(158, 163, 174, 0.3);
+      background-color: #eeeeee;
       transition-property: color, background-color;
       transition-duration: 0.3s;
     }
-    .feature-card {
+    .card {
       background-color: white;
     }
     @media (min-width: 640px) { 
@@ -64,14 +67,14 @@
     }
     }
     @media (prefers-color-scheme: dark) {
-      .watch {
-        color: rgb(106, 196, 221);
+      .watch:hover {
+        background-color: rgb(27, 31, 32);
       }
-      .secondary-btn:hover {
-        color: rgb(106, 196, 221);
+      .cta {
+        background-color: rgb(27, 31, 32);
       }
-      .feature-card {
-      background-color: black;
+      .card {
+      background-color: #1F2529;
     }
     }
   </style>
@@ -95,11 +98,11 @@
       <a href="#" class="text-2xl font-bold">Athena</a>
       <nav>
         <ul class="hidden items-center space-x-2 md:flex">
-          <!-- <li><a id="demo" class="text-gray-400 secondary-btn" onclick="scrollToSection('demoSection')">Demo</a></li> -->
+          <li><a id="demo" class="text-gray-400 secondary-btn" onclick="scrollToSection('demoSection')">Ask Athena</a></li>
           <li><a id="features" class="text-gray-400 secondary-btn" onclick="scrollToSection('featuresSection')">Features</a></li>
-          <li><a id="follow" class="text-gray-400 secondary-btn" onclick="scrollToSection('socials')">Follow us</a></li>
+          <!-- <li><a id="follow" class="text-gray-400 secondary-btn" onclick="scrollToSection('socials')">Follow us</a></li> -->
           <li><a href="downloads/athena-presskit.zip" download class="text-gray-400 secondary-btn">Press Kit</a></li>
-          <li><a id="download" class="text-white font-semibold py-2 px-4 ml-4 rounded-full bg-darkTeal" onclick="scrollToSection('downloadSection')">Download</a></li>
+          <li><a id="download" class="text-white font-semibold py-2 px-4 ml-4 rounded-full bg-teal" onclick="scrollToSection('downloadSection')">Download</a></li>
         </ul>
 
         <div class="md:hidden">
@@ -138,11 +141,11 @@
           </div>
           <div>
             <ul>
-              <!-- <li class="mb-8 navbar-close"><a id="demo" class="text-gray-400 text-2xl" onclick="scrollToSection('demoSection')">Demo</a></li> -->
+              <li class="mb-8 navbar-close"><a id="demo" class="text-gray-400 text-2xl" onclick="scrollToSection('demoSection')">Ask Athena</a></li>
               <li class="mb-8 navbar-close"><a id="features" class="text-gray-400 text-2xl" onclick="scrollToSection('featuresSection')">Features</a></li>
-              <li class="mb-8 navbar-close"><a id="follow" class="text-gray-400 text-2xl" onclick="scrollToSection('socials')">Follow us</a></li>
+              <!-- <li class="mb-8 navbar-close"><a id="follow" class="text-gray-400 text-2xl" onclick="scrollToSection('socials')">Follow us</a></li> -->
               <li class="mb-8 navbar-close"><a href="downloads/athena-presskit.zip" download class="text-gray-400 text-2xl">Press Kit</a></li>
-              <li><a id="download" class="text-white font-semibold text-2xl navbar-close py-2 px-4 rounded-full bg-darkTeal" onclick="scrollToSection('downloadSection')">Download</a></li>
+              <li><a id="download" class="text-white font-semibold text-2xl navbar-close py-2 px-4 rounded-full bg-teal" onclick="scrollToSection('downloadSection')">Download</a></li>
             </ul>
           </div>
     </div>
@@ -152,7 +155,7 @@
         <div class="text-center">
           <h1 class="text-5xl font-bold mb-6">Meet Athena.</h1>
           <h1 class="text-2xl font-bold mb-6 text-gray-400">Elevate your AI experience on iOS and Mac</h1>
-          <a id="download" class="text-white font-semibold text-xl py-2 px-4 rounded-full bg-darkTeal md:hidden" onclick="scrollToSection('downloadSection')">Download</a>
+          <a id="download" class="text-white font-semibold text-xl py-2 px-4 rounded-full bg-teal md:hidden" onclick="scrollToSection('downloadSection')">Download</a>
         </div>
       </section>
 
@@ -166,7 +169,7 @@
 
       <section id="demoSection" class="mb-20 mt-12 flex justify-center md:m-20">
         <div id="play" class="text-center text-2xl">
-          <a class="text-teal font-semibold watch md:pl-6 md:pr-6 md:pt-1 md:pb-1" style="cursor: pointer; white-space: nowrap;">
+          <a class="font-semibold watch md:pl-6 md:pr-6 md:pt-1 md:pb-1" style="cursor: pointer; white-space: nowrap;">
             <img src="static/play.svg" class="max-h-8 mr-1">
             Watch introduction video
           </a>
@@ -181,56 +184,56 @@
       <section>
         <div class="md:m-20 md:mb-8 lg:grid lg:grid-cols-2 lg:gap-4 lg:place-content-center">
           <div class="prose prose-quoteless md:m-4">
-            <blockquote class="border-l-teal dark:border-l-darkModeTeal" style="border-width: 0 0 0 4px;">
-              <p class="text-2xl font-bold mb-3 text-teal dark:text-darkModeTeal">Can you tackle my most pressing questions?</p>
+            <blockquote class="border-l-teal" style="border-width: 0 0 0 4px;">
+              <p class="text-2xl font-bold mb-3 text-teal">Can you tackle my most pressing questions?</p>
               <p class="mt-1 mb-12 dark:text-white md:mb-0 col-span-2"><b>Athena</b> can provide information on a variety of topics, such as history, science, technology, and more.</p>
             </blockquote>
           </div>
           <div class="prose prose-quoteless md:m-4">
-            <blockquote class="border-l-teal dark:border-l-darkModeTeal" style="border-width: 0 0 0 4px;">
-              <p class="text-2xl font-bold mb-3 text-teal dark:text-darkModeTeal">Could you assist me with brainstorming ideas?</p>
+            <blockquote class="border-l-teal" style="border-width: 0 0 0 4px;">
+              <p class="text-2xl font-bold mb-3 text-teal">Could you assist me with brainstorming ideas?</p>
               <p class="mt-1 mb-12 dark:text-white md:mb-0 col-span-2"><b>Athena</b> can help generate ideas for projects, stories, or other creative endeavors.</p>
             </blockquote>
           </div>
           <div class="prose prose-quoteless md:m-4">
-            <blockquote class="border-l-teal dark:border-l-darkModeTeal" style="border-width: 0 0 0 4px;">
-              <p class="text-2xl font-bold mb-3 text-teal dark:text-darkModeTeal">Could you provide suggestions for me?</p>
+            <blockquote class="border-l-teal" style="border-width: 0 0 0 4px;">
+              <p class="text-2xl font-bold mb-3 text-teal">Could you provide suggestions for me?</p>
               <p class="mt-1 mb-12 dark:text-white md:mb-0 col-span-2"><b>Athena</b> can suggest books, movies, music, cooking recipes, or anything else based on your preferences.</p>
             </blockquote>
           </div>
           <div class="prose prose-quoteless md:m-4">
-            <blockquote class="border-l-teal dark:border-l-darkModeTeal" style="border-width: 0 0 0 4px;">
-              <p class="text-2xl font-bold mb-3 text-teal dark:text-darkModeTeal">Can you help with personal finance?</p>
+            <blockquote class="border-l-teal" style="border-width: 0 0 0 4px;">
+              <p class="text-2xl font-bold mb-3 text-teal">Can you help with personal finance?</p>
               <p class="mt-1 mb-12 dark:text-white md:mb-0 col-span-2"><b>Athena</b> can provide guidance on budgeting, saving, investing, and managing finances.</p>
             </blockquote>
           </div>
           <div class="prose prose-quoteless md:m-4">
-            <blockquote class="border-l-teal dark:border-l-darkModeTeal" style="border-width: 0 0 0 4px;">
-              <p class="text-2xl font-bold mb-3 text-teal dark:text-darkModeTeal">Would you elevate my writing to new heights?</p>
+            <blockquote class="border-l-teal" style="border-width: 0 0 0 4px;">
+              <p class="text-2xl font-bold mb-3 text-teal">Would you elevate my writing to new heights?</p>
               <p class="mt-1 mb-12 dark:text-white md:mb-0 col-span-2"><b>Athena</b> can assist with writing or editing essays, articles, stories, or other content.</p>
             </blockquote>
           </div>
           <div class="prose prose-quoteless md:m-4">
-            <blockquote class="border-l-teal dark:border-l-darkModeTeal" style="border-width: 0 0 0 4px;">
-              <p class="text-2xl font-bold mb-3 text-teal dark:text-darkModeTeal">Could you craft unforgettable travel experiences for me?</p>
+            <blockquote class="border-l-teal" style="border-width: 0 0 0 4px;">
+              <p class="text-2xl font-bold mb-3 text-teal">Could you craft unforgettable travel experiences for me?</p>
               <p class="mt-1 mb-12 dark:text-white md:mb-0 col-span-2"><b>Athena</b> can help with researching destinations, finding accommodations, and creating itineraries.</p>
             </blockquote>
           </div>
           <div class="prose prose-quoteless md:m-4">
-            <blockquote class="border-l-teal dark:border-l-darkModeTeal" style="border-width: 0 0 0 4px;">
-              <p class="text-2xl font-bold mb-3 text-teal dark:text-darkModeTeal">Can you help steer me towards a better career path?</p>
+            <blockquote class="border-l-teal" style="border-width: 0 0 0 4px;">
+              <p class="text-2xl font-bold mb-3 text-teal">Can you help steer me towards a better career path?</p>
               <p class="mt-1 mb-12 dark:text-white md:mb-0 col-span-2"><b>Athena</b> can offer suggestions on career paths, job hunting strategies, and interview preparation.</p>
             </blockquote>
           </div>
           <div class="prose prose-quoteless md:m-4">
-            <blockquote class="border-l-teal dark:border-l-darkModeTeal" style="border-width: 0 0 0 4px;">
-              <p class="text-2xl font-bold mb-3 text-teal dark:text-darkModeTeal">Would you be my pair programer?</p>
+            <blockquote class="border-l-teal" style="border-width: 0 0 0 4px;">
+              <p class="text-2xl font-bold mb-3 text-teal">Would you be my pair programer?</p>
               <p class="mt-1 mb-12 dark:text-white md:mb-0 col-span-2"><b>Athena</b> can provide guidance on programming concepts and help with code debugging or optimization.</p>
             </blockquote>
           </div>
           </div>
 
-        <h1 class="text-center text-5xl font-bold mb-16">Just <b class="text-teal  dark:text-darkModeTeal">#AskAthena</b></h1>
+        <h1 class="text-center text-3xl font-bold mb-16">Just <b class="text-teal">#AskAthena</b></h1>
       </div>
       </section>
 
@@ -272,28 +275,28 @@
         <h2 class="text-4xl font-bold mb-4">More than a pretty (inter)face</h2>
         
         <div class="grid grid-cols-1 ml-5 mr-5 mt-10 md:grid-cols-2 lg:grid-cols-4 gap-4">
-          <div class="feature pl-4 pr-4 feature-card">
+          <div class="feature pl-4 pr-4 card">
             <div class="flex justify-center">
-              <img src="static/cpu.svg" class="h-16 m-1 mb-8">
+              <img src="static/cpu.svg" class="h-16 m-1 mb-8"">
             </div>
             <h3 class="text-2xl font-semibold mb-2">Offline mode</h3>
             <p>Easily browse your previous conversations even while offline.</p>
           </div>
-          <div class="feature pl-4 pr-4 feature-card">
+          <div class="feature pl-4 pr-4 card">
             <div class="flex justify-center">
               <img src="static/lock.svg" class="h-16 m-1 mb-8">
             </div>
             <h3 class="text-2xl font-semibold mb-2">Private</h3>
             <p>Our privacy-centric app safeguards your personal data, ensuring it remains on your device.</p>
           </div>
-          <div class="feature pl-4 pr-4 feature-card">
+          <div class="feature pl-4 pr-4 card">
             <div class="flex justify-center">
               <img src="static/text.svg" class="h-16 m-1 mb-8">
             </div>
             <h3 class="text-2xl font-semibold mb-2">Markdown support</h3>
             <p>Response text is fully formatted with markdown.</p>
           </div>
-          <div class="feature pl-4 pr-4 feature-card">
+          <div class="feature pl-4 pr-4 card">
             <div class="flex justify-center">
               <img src="static/chats.svg" class="h-16 m-1 mb-8">
             </div>
@@ -338,7 +341,7 @@
                   </div> -->
 
                   <div class="flex justify-center">
-                    <a target="_blank" href="https://forms.gle/wnXEwfgA8n4j2cJ39" class="text-teal font-semibold p-2 pl-4 pr-4 rounded-lg bg-gray-800 dark:text-darkModeTeal" style="cursor: pointer; background-color: rgba(158, 163, 174, 0.3); white-space: nowrap;">
+                    <a target="_blank" href="https://forms.gle/wnXEwfgA8n4j2cJ39" class="text-teal cta font-semibold p-2 pl-4 pr-4 rounded-lg" style="cursor: pointer; white-space: nowrap;">
                       Join the waitlist
                     </a>
                   </div>
@@ -370,7 +373,7 @@
                   </div> -->
   
                   <div class="flex justify-center">
-                    <a target="_blank" href="https://forms.gle/wnXEwfgA8n4j2cJ39" class="text-teal font-semibold p-2 pl-4 pr-4 rounded-lg bg-gray-800 dark:text-darkModeTeal" style="cursor: pointer; background-color: rgba(158, 163, 174, 0.3); white-space: nowrap;">
+                    <a target="_blank" href="https://forms.gle/wnXEwfgA8n4j2cJ39" class="text-teal cta font-semibold p-2 pl-4 pr-4 rounded-lg" style="cursor: pointer; white-space: nowrap;">
                       Join the waitlist
                     </a>
                   </div>
@@ -401,7 +404,7 @@
                   </div> -->
   
                   <div class="flex justify-center">
-                    <a target="_blank" href="https://forms.gle/wnXEwfgA8n4j2cJ39" class="text-teal font-semibold p-2 pl-4 pr-4 rounded-lg bg-gray-800 dark:text-darkModeTeal" style="cursor: pointer; background-color: rgba(158, 163, 174, 0.3); white-space: nowrap;">
+                    <a target="_blank" href="https://forms.gle/wnXEwfgA8n4j2cJ39" class="text-teal cta font-semibold p-2 pl-4 pr-4 rounded-lg" style="cursor: pointer; white-space: nowrap;">
                       Join the waitlist
                     </a>
                   </div>
@@ -436,6 +439,12 @@
 
       </section>
 
+      <div class="flex justify-center text-center m-10">
+        <h1 class="text-2xl font-semibold md:w-2/3">
+          And we are just getting started!
+        </h1>
+      </div>
+
       <div class="text-center space-y-4">
         <p>
           A
@@ -446,7 +455,8 @@
           <a target="_blank" href="https://benkau.com" class="dark:text-white">
             <u>Shaps Benkau</u></a
           >
-          Product © 2023 Athena AI, Ltd.
+          Product 
+          © 2023 Athena AI, Ltd.
         </p>
 
         <p>

@@ -4,20 +4,8 @@
 
 @layer components {
     .card {
-        background-color: theme('colors.grey');
-        border-radius: theme('borderRadius.2xl');
-        padding: theme('spacing.6');
-        box-shadow: theme('boxShadow.lg');
-      }
-    .dark-card {
-      background-color: theme('colors.deepGrey');
-      border-radius: theme('borderRadius.2xl');
-      padding: theme('spacing.6');
-      box-shadow: theme('boxShadow.xl');
-    }
-    .feature-card {
       background-color: '#fffff';
       border-radius: theme('borderRadius.2xl');
       padding: theme('spacing.6');
-    }
+      }
   }

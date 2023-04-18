@@ -14,9 +14,7 @@ module.exports = {
       colors: {
         'carbon': '#151517',
         'egg': '#f4f4f4',
-        'teal': '#5aafc4',
-        'darkModeTeal': '#6ac4dd',
-        'darkTeal': '#6797a8',
+        'teal': '#03AEDC',
         'deepGrey': '#2E2E2F',
         'grey': '#E0E0E2'
       }
