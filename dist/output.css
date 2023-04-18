@@ -689,6 +689,10 @@ video {
   margin-top: 4rem;
 }
 
+.mt-5 {
+  margin-top: 1.25rem;
+}
+
 .block {
   display: block;
 }
@@ -1139,6 +1143,10 @@ video {
 
   .md\:mt-24 {
     margin-top: 6rem;
+  }
+
+  .md\:mt-28 {
+    margin-top: 7rem;
   }
 
   .md\:flex {
