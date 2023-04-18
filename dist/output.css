@@ -1232,6 +1232,14 @@ video {
   .md\:pt-1 {
     padding-top: 0.25rem;
   }
+
+  .md\:pl-20 {
+    padding-left: 5rem;
+  }
+
+  .md\:pr-20 {
+    padding-right: 5rem;
+  }
 }
 
 @media (min-width: 1024px) {
