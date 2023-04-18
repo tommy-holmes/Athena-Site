@@ -20,8 +20,8 @@
             --sans-serif: ui-rounded, -apple-system, BlinkMacSystemFont, "Open Sans", "Segoe UI", Roboto, Ubuntu, sans-serif;
             font-family:var(--sans-serif)
         } 
-    blockquote {
-      font-style: normal !important;
+    h1, h2, h3, h4, h5, p {
+      opacity: 0.8;
     }
     #download {
       cursor: pointer;
@@ -156,21 +156,13 @@
     <main class="mt-20 max-w-screen-sm p-1 md:max-w-screen-2xl m-5">
       <section class="md:mt-12">
         <div class="text-center">
-          <h1 class="text-5xl font-bold mb-6">Meet Athena.</h1>
-          <h1 class="text-2xl font-bold mb-6 text-gray-400">Elevate your AI experience on iOS and Mac</h1>
+          <h1 class="text-5xl font-bold mb-2">Meet Athena.</h1>
+          <h1 class="text-2xl">Elevate your AI experience on iOS and Mac</h1>
           <a id="download" class="text-white font-semibold text-xl py-2 px-4 rounded-full bg-teal md:hidden" onclick="scrollToSection('downloadSection')">Download</a>
         </div>
       </section>
 
-      <section>
-        <div class="justify-center mt-10 mb-10 space-y-4 md:flex md:space-x-4">
-            <img src="static/X Device - Hero 1 - Light.png" class="w-7/8 dark:hidden">
-            <img src="static/X Device - Hero 1 - Dark.png" class="w-7/8 hidden dark:block">
-        </div>
-      </section>
-
-
-      <section id="demoSection" class="mb-20 mt-12 flex justify-center md:m-20">
+      <section id="demoSection" class="mb-12 mt-12 flex justify-center md:m-20">
         <div id="play" class="text-center text-2xl">
           <a class="font-semibold watch md:pl-6 md:pr-6 md:pt-1 md:pb-1" style="cursor: pointer; white-space: nowrap;">
             <img src="static/play.svg" class="max-h-8 mr-1">
@@ -180,6 +172,13 @@
 
         <div id="demoVideo" style="display: none;">
           <video autoplay loop controls muted src="static/Athena iOS Demo.mov"></video>
+        </div>
+      </section>
+
+      <section>
+        <div class="justify-center mt-10 mb-10 space-y-4 md:flex md:space-x-4">
+            <img src="static/X Device - Hero 1 - Light.png" class="w-7/8 dark:hidden">
+            <img src="static/X Device - Hero 1 - Dark.png" class="w-7/8 hidden dark:block">
         </div>
       </section>
 
@@ -231,7 +230,7 @@
       </section>
 
       <section id="featuresSection" class="mt-40 text-center">
-        <h2 class="text-4xl font-bold mb-4">More than a pretty (inter)face</h2>
+        <h2 class="text-4xl font-bold mb-2">More than a pretty (inter)face</h2>
         <div class="flex justify-center">
           <h1 class="text-lg w-3/4 md:w-2/3">
             Explore the features behind Athena's best-in-class AI experience that sets it apart from the rest.
@@ -304,7 +303,7 @@
         </div>
 
         <div class="text-center m-10">
-          <h1 class="text-2xl font-bold mb-4">...and we are only just getting started</h1>
+          <h1 class="text-2xl font-bold mb-2">...and we are only just getting started</h1>
           <div class="flex justify-center">
             <h1 class="text-md md:w-2/3">
               We are dedicated to enhancing Athena, continually adding exciting features to elevate your AI experience even further!
@@ -316,7 +315,7 @@
       <section id="downloadSection" class="mt-40 mb-20 flex justify-center">
         <div class="space-y-16">
           <div class="text-center">
-            <h1 class="text-4xl font-bold mb-4">Sign up for the waitlist</h1>
+            <h1 class="text-4xl font-bold mb-2">Sign up for the waitlist</h1>
             <div class="flex justify-center">
               <h1 class="text-lg w-3/4 md:w-2/3">We can only take on a limited number of users for now, but for a chance to be one of the first to get to use Athena 
                 sign up for the waitlist.</h1>
@@ -425,7 +424,7 @@
 
 
       <section id="socials" class="mt-40 mb-40 text-center">
-        <h1 class="text-4xl font-bold mb-4">Follow Athena's journey</h1>
+        <h1 class="text-4xl font-bold mb-2">Follow Athena's journey</h1>
         <div class="flex justify-center">
           <h1 class="text-lg w-3/4 md:w-2/3">
             Be in the loop and the first to know when exciting new features drop and any other major updates by following Athena on social media. 

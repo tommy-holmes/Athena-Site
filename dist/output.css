@@ -697,6 +697,10 @@ video {
   margin-top: 2rem;
 }
 
+.mb-12 {
+  margin-bottom: 3rem;
+}
+
 .block {
   display: block;
 }
@@ -993,6 +997,10 @@ video {
 
 .opacity-25 {
   opacity: 0.25;
+}
+
+.opacity-80 {
+  opacity: 0.8;
 }
 
 .backdrop-blur {
