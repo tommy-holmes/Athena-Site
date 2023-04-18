@@ -693,6 +693,14 @@ video {
   margin-top: 1.25rem;
 }
 
+.mt-28 {
+  margin-top: 7rem;
+}
+
+.mb-5 {
+  margin-bottom: 1.25rem;
+}
+
 .block {
   display: block;
 }
