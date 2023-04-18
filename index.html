@@ -42,6 +42,9 @@
       transition-property: color, background-color;
       transition-duration: 0.3s;
     }
+    .hiddenMobile {
+      display: none;
+    }
     .cta {
       background-color: #eeeeee;
     }
@@ -67,6 +70,9 @@
     }
       .icon:hover {
         transform: scale(1.08);
+    }
+    .hiddenMobile {
+      display: block;
     }
     }
     @media (prefers-color-scheme: dark) {
@@ -248,11 +254,11 @@
                 <p class="mt-0 font-bold mb-3 dark:text-white">I need a few facts and figures for a science project I am working on, can you help?</p>
                 <p class="mt-1 dark:text-slate-400 mb-0 col-span-2">Athena can provide information on a variety of topics, such as history, science, technology, and more.</p>
             </div>
-            <div class="card">
+            <div class="card hiddenMobile">
                 <p class="mt-0 font-bold mb-3 dark:text-white">I have family staying and need to cook for 5 of them. Can you suggest a popular Italian recipe with the right quantities for 6 adults?</p>
                 <p class="mt-1 dark:text-slate-400 mb-0 col-span-2">Athena can suggest books, movies, music, cooking recipes and instructions, or anything else based on your preferences.</p>
             </div>
-            <div class="card">
+            <div class="card hiddenMobile">
                 <p class="mt-0 font-bold mb-3 dark:text-white">I'm having trouble managing my expenses and saving money, can you give me advice on how to improve my personal financial situation?</p>
                 <p class="mt-1 dark:text-slate-400 mb-0 col-span-2">Athena can provide guidance on budgeting, saving, investing, and managing finances.</p>
             </div>
@@ -264,11 +270,11 @@
                 <p class="mt-0 font-bold mb-3 dark:text-white">I have a book writtern in German, can you translate it to English for me?</p>
                 <p class="mt-1 dark:text-slate-400 mb-0 col-span-2">You can provide Athena with the text you would like translated and specify the source and target languages, she will handle the rest.</p>
             </div>
-            <div class="card">
+            <div class="card hiddenMobile">
                 <p class="mt-0 font-bold mb-3 dark:text-white">I'm planning a vacation to Europe and want to make it truly memorable, can you suggest some unique and unforgettable experiences I should include in my itinerary?</p>
                 <p class="mt-1 dark:text-slate-400 mb-0 col-span-2">Athena can help with researching destinations, finding accommodations, and creating itineraries.</p>
             </div>
-            <div class="card">
+            <div class="card hiddenMobile">
                 <p class="mt-0 font-bold mb-3 dark:text-white">I'm feeling unfulfilled in my current job and want to make a change, can you help me explore different career options that might be a better fit for me?</p>
                 <p class="mt-1 dark:text-slate-400 mb-0 col-span-2">You can ask Athena and she can offer suggestions on career paths, job hunting strategies, and interview preparation.</p>
             </div>

@@ -556,6 +556,10 @@ video {
   padding: 1.5rem;
 }
 
+.visible {
+  visibility: visible;
+}
+
 .fixed {
   position: fixed;
 }
