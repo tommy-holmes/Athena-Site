@@ -99,19 +99,16 @@
 </head>
 
 <body class="text-black bg-egg dark:bg-carbon dark:text-white">
-  <div class="container mx-auto px-4 py-12">
-    <header class="flex top-0 p-5 backdrop-blur bg-egg/90 dark:bg-carbon/90 sticky z-10 items-center justify-between">
+  <div class="container mx-auto">
+    <header class="flex top-0 p-5 backdrop-blur bg-egg/90 dark:bg-carbon/90 z-10 items-center justify-between">
       <a href="#" class="text-2xl font-bold">Athena</a>
       <nav>
-        <ul class="hidden items-center space-x-2 md:flex">
-          <li><a id="demo" class="text-gray-400 secondary-btn" onclick="scrollToSection('demoSection')">Ask Athena</a></li>
-          <li><a id="features" class="text-gray-400 secondary-btn" onclick="scrollToSection('featuresSection')">Features</a></li>
-          <!-- <li><a id="follow" class="text-gray-400 secondary-btn" onclick="scrollToSection('socials')">Follow us</a></li> -->
-          <li><a href="downloads/athena-presskit.zip" download class="text-gray-400 secondary-btn">Press Kit</a></li>
+        <ul class="items-center space-x-2 md:flex">
+          <!-- <li><a href="downloads/athena-presskit.zip" download class="text-gray-400 secondary-btn">Press Kit</a></li> -->
           <li><a id="download" class="text-white font-semibold py-2 px-4 ml-4 rounded-full bg-teal" onclick="scrollToSection('downloadSection')">Download</a></li>
         </ul>
 
-        <div class="md:hidden">
+        <!-- <div class="md:hidden">
           <button class="navbar-burger flex">
             <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -128,12 +125,12 @@
             />
           </svg>
           </button>
-        </div>
+        </div> -->
       </nav>
     </header>
 
     <!-- Side burger menu -->
-    <div>
+    <!-- <div>
       <div class="navbar-menu relative z-50 hidden">
         <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
         <nav class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-egg dark:bg-carbon overflow-y-auto">
@@ -148,20 +145,19 @@
           <div>
             <ul>
               <li class="mb-8 navbar-close"><a id="demo" class="text-gray-400 text-2xl" onclick="scrollToSection('demoSection')">Ask Athena</a></li>
-              <li class="mb-8 navbar-close"><a id="features" class="text-gray-400 text-2xl" onclick="scrollToSection('featuresSection')">Features</a></li>
+              <li class="mb-8 navbar-close"><a id="features" class="text-gray-400 text-2xl" onclick="scrollToSection('featuresSection')">Features</a></li> -->
               <!-- <li class="mb-8 navbar-close"><a id="follow" class="text-gray-400 text-2xl" onclick="scrollToSection('socials')">Follow us</a></li> -->
-              <li class="mb-8 navbar-close"><a href="downloads/athena-presskit.zip" download class="text-gray-400 text-2xl">Press Kit</a></li>
+              <!-- <li class="mb-8 navbar-close"><a href="downloads/athena-presskit.zip" download class="text-gray-400 text-2xl">Press Kit</a></li>
               <li><a id="download" class="text-white font-semibold text-2xl navbar-close py-2 px-4 rounded-full bg-teal" onclick="scrollToSection('downloadSection')">Download</a></li>
             </ul>
           </div>
-    </div>
+    </div> -->
 
-    <main class="mt-20 max-w-screen-sm p-1 md:max-w-screen-2xl m-5">
+    <main class="max-w-screen-sm p-1 md:max-w-screen-2xl m-5">
       <section class="md:mt-12">
         <div class="text-center">
           <h1 class="text-5xl font-bold mb-2">Meet Athena.</h1>
           <h1 class="text-2xl">Elevate your AI experience on iOS and Mac</h1>
-          <a id="download" class="text-white font-semibold text-xl py-2 px-4 rounded-full bg-teal md:hidden" onclick="scrollToSection('downloadSection')">Download</a>
         </div>
       </section>
 
@@ -179,7 +175,7 @@
       </section>
 
       <section>
-        <div class="justify-center mt-10 mb-10 space-y-4 md:flex md:space-x-4">
+        <div class="justify-center mt-8 space-y-4 md:flex md:space-x-4">
             <img src="static/X Device - Hero 1 - Light.png" class="w-7/8 dark:hidden">
             <img src="static/X Device - Hero 1 - Dark.png" class="w-7/8 hidden dark:block">
         </div>
