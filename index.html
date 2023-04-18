@@ -111,57 +111,13 @@
         <a href="#" class="watermark text-2xl font-bold">Athena</a>
         <nav>
           <ul class="items-center space-x-2 md:flex">
-            <!-- <li><a href="downloads/athena-presskit.zip" download class="text-gray-400 secondary-btn">Press Kit</a></li> -->
             <li><a id="download" class="text-white font-semibold py-2 px-4 ml-4 rounded-full bg-teal" onclick="scrollToSection('downloadSection')">Download</a></li>
           </ul>
-  
-          <!-- <div class="md:hidden">
-            <button class="navbar-burger flex">
-              <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="w-6 h-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M4 6h16M4 12h16M4 18h16"
-              />
-            </svg>
-            </button>
-          </div> -->
         </nav>
       </header>
     </div>
 
-    <!-- Side burger menu -->
-    <!-- <div>
-      <div class="navbar-menu relative z-50 hidden">
-        <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
-        <nav class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-egg dark:bg-carbon overflow-y-auto">
-          <div class="flex items-center space-x-40 mb-8">
-              <a href="#" class="text-2xl font-bold">Athena</a>
-            <button class="navbar-close">
-              <svg class="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-              </svg>
-            </button>
-          </div>
-          <div>
-            <ul>
-              <li class="mb-8 navbar-close"><a id="demo" class="text-gray-400 text-2xl" onclick="scrollToSection('demoSection')">Ask Athena</a></li>
-              <li class="mb-8 navbar-close"><a id="features" class="text-gray-400 text-2xl" onclick="scrollToSection('featuresSection')">Features</a></li> -->
-              <!-- <li class="mb-8 navbar-close"><a id="follow" class="text-gray-400 text-2xl" onclick="scrollToSection('socials')">Follow us</a></li> -->
-              <!-- <li class="mb-8 navbar-close"><a href="downloads/athena-presskit.zip" download class="text-gray-400 text-2xl">Press Kit</a></li>
-              <li><a id="download" class="text-white font-semibold text-2xl navbar-close py-2 px-4 rounded-full bg-teal" onclick="scrollToSection('downloadSection')">Download</a></li>
-            </ul>
-          </div>
-    </div> -->
-
-    <main class="max-w-screen-sm m-5 md:max-w-screen-2xl">
+    <main class="max-w-screen-sm m-8 md:max-w-screen-2xl">
       <section class="mt-28">
         <div class="text-center">
           <h1 class="text-5xl font-bold mb-2">Meet Athena.</h1>
@@ -192,7 +148,7 @@
       <section id="featuresSection" class="mt-32 text-center">
         <h2 class="text-4xl font-bold mb-2">More than a pretty (inter)face</h2>
         <div class="flex justify-center">
-          <h1 class="text-lg w-3/4 md:w-2/3">
+          <h1 class="text-lg md:w-2/3">
             Explore the features behind Athena's best-in-class AI experience that sets it apart from the rest.
           </h1>
         </div>
@@ -200,28 +156,28 @@
         <div class="flex justify-center md:pl-20 md:pr-20">
           <div class="grid grid-cols-1 mt-10 md:grid-cols-2 max-w-5xl lg:grid-cols-4 gap-4">
 
-            <div class="feature pl-4 pr-4 card">
+            <div class="feature card">
               <div class="flex justify-center">
                 <img src="static/phone.svg" class="h-16 m-1 mb-8"">
               </div>
               <h3 class="text-2xl font-semibold mb-2">Native</h3>
               <p>Glide through smooth navigation and familiar gestures for a top-notch user experience.</p>
             </div>
-            <div class="feature pl-4 pr-4 card">
+            <div class="feature card">
               <div class="flex justify-center">
                 <img src="static/lock.svg" class="h-16 m-1 mb-8">
               </div>
               <h3 class="text-2xl font-semibold mb-2">Private</h3>
               <p>Our privacy-centric app safeguards your personal data, ensuring it remains on your device.</p>
             </div>
-            <div class="feature pl-4 pr-4 card">
+            <div class="feature card">
               <div class="flex justify-center">
                 <img src="static/instruments.svg" class="h-16 m-1 mb-8">
               </div>
               <h3 class="text-2xl font-semibold mb-2">Fully accessible</h3>
               <p>Features like resizable text, dictation, haptic feedback, and sound chimes for an accessible experience.</p>
             </div>
-            <div class="feature pl-4 pr-4 card">
+            <div class="feature card">
               <div class="flex justify-center">
                 <img src="static/bulb.svg" class="h-16 m-1 mb-8">
               </div>
@@ -230,28 +186,28 @@
             </div>
             
   
-            <div class="feature pl-4 pr-4 card">
+            <div class="feature card">
               <div class="flex justify-center">
                 <img src="static/cpu.svg" class="h-16 m-1 mb-8"">
               </div>
               <h3 class="text-2xl font-semibold mb-2">Offline mode</h3>
               <p>Easily browse your previous conversations even while offline.</p>
             </div>
-            <div class="feature pl-4 pr-4 card">
+            <div class="feature card">
               <div class="flex justify-center">
                 <img src="static/text.svg" class="h-16 m-1 mb-8">
               </div>
               <h3 class="text-2xl font-semibold mb-2">Markdown support</h3>
               <p>Response text is richly formatted with markdown.</p>
             </div>
-            <div class="feature pl-4 pr-4 card">
+            <div class="feature card">
               <div class="flex justify-center">
                 <img src="static/moon.svg" class="h-16 m-1 mb-8">
               </div>
               <h3 class="text-2xl font-semibold mb-2">Dark mode</h3>
               <p>Boost focus and safeguard your eyes with dark mode - perfect for night owls or darker aesthetic lovers.</p>
             </div>
-            <div class="feature pl-4 pr-4 card">
+            <div class="feature card">
               <div class="flex justify-center">
                 <img src="static/chats.svg" class="h-16 m-1 mb-8">
               </div>
@@ -322,11 +278,11 @@
       </section>
 
       <section id="downloadSection" class="mt-32 mb-20 flex justify-center">
-        <div class="space-y-16">
+        <div class="space-y-16 ml-5 mr-5">
           <div class="text-center">
             <h1 class="text-4xl font-bold mb-2">Sign up for the waitlist</h1>
             <div class="flex justify-center">
-              <h1 class="text-lg w-3/4 md:w-2/3">We can only take on a limited number of users for now, but for a chance to be one of the first to get to use Athena 
+              <h1 class="text-lg ml-5 mr-5 md:w-2/3">We can only take on a limited number of users for now, but for a chance to be one of the first to get to use Athena 
                 sign up for the waitlist.</h1>
             </div>
           </div>
