@@ -995,6 +995,18 @@ video {
   padding-top: 0.25rem;
 }
 
+.pr-20 {
+  padding-right: 5rem;
+}
+
+.pt-20 {
+  padding-top: 5rem;
+}
+
+.pl-20 {
+  padding-left: 5rem;
+}
+
 .text-center {
   text-align: center;
 }
