@@ -7,7 +7,7 @@ module.exports = {
         'carbon': '#151517',
         'egg': '#f4f4f4',
         'teal': '#03AEDC',
-        'deepGrey': '#2E2E2F',
+        'deepGrey': '#202529',
         'grey': '#E0E0E2'
       }
     },

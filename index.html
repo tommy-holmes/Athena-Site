@@ -32,12 +32,12 @@
     .secondary-btn {
       cursor: pointer;
       display: block;
-      padding: 4px 10px;
+      /* padding: 4px 10px; */
     }
     .secondary-btn:hover {
       /* text-decoration: underline; */
       border-radius: 6px;
-      background-color: #eeeeee;
+      /* background-color: #eeeeee; */
       color: #03AEDC;
       transition-property: color, background-color;
       transition-duration: 0.3s;
@@ -85,9 +85,9 @@
       .watch:hover {
         background-color: rgb(27, 31, 32);
       }
-      .secondary-btn:hover {
+      /* .secondary-btn:hover {
         background-color: rgb(27, 31, 32);
-      }
+      } */
       .cta {
         background-color: rgb(27, 31, 32);
       }
@@ -436,36 +436,54 @@
 
       </section>
 
-      <div class="flex justify-center">
-        <div class="container max-w-md md:max-w-xl lg:max-w-4xl border-b border-b-slate-300 dark:border-b-slate-700">
+      <div class="flex justify-center bg-white dark:bg-deepGrey">
+        <div class="container p-8 pb-4 max-w-4xl">
 
-          <div class="text-center space-y-4 m-10">
+          <div class="grid gap-8 grid-cols-2 md:grid-cols-4">
+
+            <div class="space-y-1">
+              <h1 class="font-bold text-slate-500 dark:text-slate-300">Products</h1>
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSf83PDgOX2jfuqIyxMANd5WrVrxkoEfY1B_XQqAr5wgzt48cg/viewform?usp=sf_link" class="text-slate-400 dark:text-slate-500 secondary-btn">Athena for Mac</a>
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSf83PDgOX2jfuqIyxMANd5WrVrxkoEfY1B_XQqAr5wgzt48cg/viewform?usp=sf_link" class="text-slate-400 dark:text-slate-500 secondary-btn">Athena for iPhone</a>
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSf83PDgOX2jfuqIyxMANd5WrVrxkoEfY1B_XQqAr5wgzt48cg/viewform?usp=sf_link" class="text-slate-400 dark:text-slate-500 secondary-btn">Athena for iPad</a>
+            </div>
+
+            <div class="space-y-1">
+              <h1 class="font-bold text-slate-500 dark:text-slate-300">Support</h1>
+              <a href="mailto: feedback@theathena.app" class="text-slate-400 dark:text-slate-500 secondary-btn">Provide feedback</a>
+              <a href="mailto: features@theathena.app" class="text-slate-400 dark:text-slate-500 secondary-btn">Request feature</a>
+            </div>
+
+            <div class="space-y-1">
+              <h1 class="font-bold text-slate-500 dark:text-slate-300">News</h1>
+              <a target="_blank" href="https://twitter.com/TheAthenaApp" class="text-slate-400 dark:text-slate-500 secondary-btn">Twitter</a>
+              <a target="_blank" href="https://mastodon.online/@TheAthenaApp" class="text-slate-400 dark:text-slate-500 secondary-btn">Mastodon</a>
+              <a target="_blank" href="https://www.youtube.com/@TheAthenaApp" class="text-slate-400 dark:text-slate-500 secondary-btn">YouTube</a>
+              <a target="_blank" href="https://instagram.com/theathenaapp" class="text-slate-400 dark:text-slate-500 secondary-btn">Instagram</a>
+            </div>
+
+            <div class="space-y-1">
+              <h1 class="font-bold text-slate-500 dark:text-slate-300">Company</h1>
+              <a target="_blank" href="https://github.com/tommy-holmes" class="text-slate-400 dark:text-slate-500 secondary-btn">Tom Holmes</a>
+              <a target="_blank" href="https://benkau.com" class="text-slate-400 dark:text-slate-500 secondary-btn">Shaps Benkau</a>
+            <a href="downloads/athena-presskit.zip" download class="text-slate-400 dark:text-slate-500 secondary-btn">Press Kit</a>
+            </div>
+
+          </div>
+
+          <div class="flex justify-center mt-16">
+            <img src="static/logo-small.svg" style="height: 16pt;">
+          </div>
+
+          <div class="text-center m-2">
             <p>
-              A
-              <a target="_blank" href="https://github.com/tommy-holmes" class="dark:text-white">
-                <u>Tom Holmes</u></a
-              >
-              and
-              <a target="_blank" href="https://benkau.com" class="dark:text-white">
-                <u>Shaps Benkau</u></a
-              >
-              Product 
-              © 2023 Athena AI, Ltd.
-            </p>
-    
-            <p>
-              <a target="_blank" href="https://openai.com" class="text-sm text-slate-400 dark:text-slate-600">
+              <a target="_blank" href="https://openai.com" class="text-sm text-slate-500">
                 POWERED BY OPENAI'S CHATGPT
               </a>
             </p>
           </div>
         </div>
 
-      </div>
-
-      <div class="flex justify-center m-5">
-        <img src="static/logo-small.svg" style="height: 16pt;">
-        <!-- <a href="downloads/athena-presskit.zip" download class="text-slate-400 dark:text-slate-600 secondary-btn">Press Kit</a> -->
       </div>
     </main>
   </div>
