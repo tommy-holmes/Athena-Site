@@ -701,6 +701,10 @@ video {
   max-height: 2rem;
 }
 
+.max-h-24 {
+  max-height: 6rem;
+}
+
 .min-h-min {
   min-height: -moz-min-content;
   min-height: min-content;
