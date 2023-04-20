@@ -1067,6 +1067,16 @@ video {
     --tw-text-opacity: 1;
     color: rgb(203 213 225 / var(--tw-text-opacity));
   }
+
+  .dark\:text-slate-700 {
+    --tw-text-opacity: 1;
+    color: rgb(51 65 85 / var(--tw-text-opacity));
+  }
+
+  .dark\:text-slate-800 {
+    --tw-text-opacity: 1;
+    color: rgb(30 41 59 / var(--tw-text-opacity));
+  }
 }
 
 @media (min-width: 768px) {
