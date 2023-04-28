@@ -682,7 +682,7 @@ export default function Home() {
                 <div className="flex justify-center mt-16">
                   <img
                     src="static/logo-small-1.svg"
-                    className="height: 16pt;"
+                    className="h-6"
                   />
                 </div>
 
