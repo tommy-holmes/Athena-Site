@@ -44,7 +44,7 @@ module.exports = require("next/dist/compiled/react-server-dom-webpack/client");
 
 /***/ }),
 
-/***/ 61090:
+/***/ 95232:
 /***/ ((module) => {
 
 "use strict";
@@ -156,7 +156,7 @@ module.exports = require("url");
 
 /***/ }),
 
-/***/ 90480:
+/***/ 81368:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -1214,7 +1214,7 @@ if ((typeof exports.default === "function" || typeof exports.default === "object
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [961,540,506], () => (__webpack_exec__(90480)));
+var __webpack_exports__ = __webpack_require__.X(0, [961,540,506], () => (__webpack_exec__(81368)));
 module.exports = __webpack_exports__;
 
 })();
