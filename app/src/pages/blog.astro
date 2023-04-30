@@ -3,10 +3,53 @@ import Layout from "../layouts/Layout.astro";
 import { getPosts } from "../utils/sanity";
 
 const posts = await getPosts();
+
+console.log(posts);
+
+function formatDate(dateString: string) {
+  const locale =
+    typeof navigator !== "undefined" ? navigator.language : "en-GB";
+  const date = new Date(dateString);
+
+  return new Intl.DateTimeFormat(locale).format(date);
+}
 ---
 
 <Layout title="The Athena Blog" image="">
-    <section>
-        {posts.length ? posts.map((post) => <h1>{post.title}</h1>) : <h1>No posts</h1>}
-    </section>
+  <section class="text-center m-10 md:m-20">
+    <h1 class="text-6xl font-bold mb-4">Welcome to our blog</h1>
+
+    <div class="flex justify-center">
+      <p class="text-xl max-w-3xl">
+        Here, you can explore the freshest updates and discover awesome tips for
+        getting the most out of your Athena experience.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-10 md:m-20">
+      {
+        posts.length ? (
+          posts.map((post) => (
+              <a href={`/blog/${post.slug.current}`}>
+                <div>{post.mainImage}</div>
+
+                <div class="tile text-left space-y-2">
+                  <h1 class="text-2xl font-semibold">{post.title}</h1>
+
+                  <p class="text-xs text-slate-400 dark:text-slate-500">
+                    {formatDate(post._createdAt)}
+                  </p>
+
+                  <p class="text-md">{post.author.name}</p>
+
+                  <p>{post.body[0].children[0].text}</p>
+                </div>
+              </a>
+          ))
+        ) : (
+          <h1>No posts</h1>
+        )
+      }
+    </div>
+  </section>
 </Layout>
