@@ -7,44 +7,8 @@ import Layout from "../layouts/Layout.astro";
   image="http://theathena.app/static/site-meta-img.jpg"
 >
   <style>
-    :root {
-      --sans-serif: ui-rounded, -apple-system, BlinkMacSystemFont, "Open Sans",
-        "Segoe UI", Roboto, Ubuntu, sans-serif;
-      font-family: var(--sans-serif);
-    }
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    p {
-      opacity: 0.8;
-    }
-    #download {
-      cursor: pointer;
-    }
-    #btn {
-      cursor: pointer;
-      white-space: nowrap;
-    }
     #demoVideo {
       display: none;
-    }
-    .secondary-btn {
-      cursor: pointer;
-      display: block;
-    }
-    .secondary-btn:hover {
-      border-radius: 6px;
-      color: #03aedc;
-      transition-property: color, background-color;
-      transition-duration: 0.3s;
-    }
-    .hiddenMobile {
-      display: none;
-    }
-    .cta {
-      background-color: #eeeeee;
     }
     .watch {
       display: inline-flex;
@@ -71,23 +35,9 @@ import Layout from "../layouts/Layout.astro";
       .icon:hover {
         transform: scale(1.08);
       }
-      .hiddenMobile {
-        display: block;
-      }
     }
     @media (prefers-color-scheme: dark) {
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      p {
-        opacity: 0.9;
-      }
       .watch:hover {
-        background-color: rgb(27, 31, 32);
-      }
-      .cta {
         background-color: rgb(27, 31, 32);
       }
       .tile {
@@ -117,7 +67,7 @@ import Layout from "../layouts/Layout.astro";
   </section>
 
   <section class="mx-20">
-    <div class="justify-center hiddenMobile mt-28">
+    <div class="justify-center hidden md:block mt-28">
       <img src="/X Device - Hero 1 - Light.png" class="w-7/8 dark:hidden" />
       <img
         src="/X Device - Hero 1 - Dark.png"

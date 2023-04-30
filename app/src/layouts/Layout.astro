@@ -12,7 +12,7 @@ function scrollToSection(sectionID: string) {
   if (element) {
     element.scrollIntoView({ behavior: "smooth" });
   } else {
-    window.location.href = "../index.html"
+    window.location.href = "../index.html";
   }
 }
 ---
@@ -22,7 +22,7 @@ function scrollToSection(sectionID: string) {
   <head>
     <meta charset="UTF-8" />
     <!-- HTML Meta Tags -->
-    <title>Athena - Your versatile AI assistant for Mac and iOS</title>
+    <title>{title}</title>
     <meta
       name="description"
       content="Athena is a powerful AI-powered, privacy-centric chat app for iOS devices and Mac that offers offline mode, multiple conversations and an intuitive user interface."
@@ -32,7 +32,7 @@ function scrollToSection(sectionID: string) {
     <!-- Google / Search Engine Tags -->
     <meta
       itemprop="name"
-      content="Athena - Your versatile AI assistant for Mac and iOS"
+      content={title}
     />
     <meta
       name="keywords"
@@ -49,7 +49,7 @@ function scrollToSection(sectionID: string) {
     <meta property="og:type" content="website" />
     <meta
       property="og:title"
-      content="Athena - Your versatile AI assistant for Mac and iOS"
+      content={title}
     />
     <meta
       property="og:description"
@@ -61,7 +61,7 @@ function scrollToSection(sectionID: string) {
     <meta name="twitter:card" content="summary_large_image" />
     <meta
       name="twitter:title"
-      content="Athena - Your versatile AI assistant for Mac and iOS"
+      content={title}
     />
     <meta
       name="twitter:description"
@@ -80,9 +80,27 @@ function scrollToSection(sectionID: string) {
 
     <link rel="icon" type="image/x-icon" href="static/icon.png" />
 
-    <title>{title}</title>
-
-    <style>
+    <style is:global>
+      :root {
+        --sans-serif: ui-rounded, -apple-system, BlinkMacSystemFont, "Open Sans",
+          "Segoe UI", Roboto, Ubuntu, sans-serif;
+        font-family: var(--sans-serif);
+      }
+      #download {
+        cursor: pointer;
+      }
+      #btn {
+        cursor: pointer;
+        white-space: nowrap;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      p {
+        opacity: 0.8;
+      }
       .secondary-btn {
         cursor: pointer;
         display: block;
@@ -99,8 +117,22 @@ function scrollToSection(sectionID: string) {
       .prominant:hover {
         background-color: #eeeeee;
       }
+      .cta {
+        background-color: #eeeeee;
+      }
       @media (prefers-color-scheme: dark) {
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        p {
+          opacity: 0.9;
+        }
         .prominant:hover {
+          background-color: rgb(27, 31, 32);
+        }
+        .cta {
           background-color: rgb(27, 31, 32);
         }
       }
@@ -111,7 +143,7 @@ function scrollToSection(sectionID: string) {
     <div>
       <div class="lg:grid">
         <header
-          class="flex top-0 mx-auto p-5 mt-5 lg:gap-[44rem] justify-self-center max-w-5xl backdrop-blur bg-egg/90 dark:bg-carbon/90 z-10 items-center justify-between"
+          class="flex top-0 mx-auto p-5 mt-5 lg:gap-[40rem] justify-self-center max-w-5xl backdrop-blur bg-egg/90 dark:bg-carbon/90 z-10 items-center justify-between"
         >
           <a
             href="../index.html"
@@ -124,11 +156,21 @@ function scrollToSection(sectionID: string) {
               <li>
                 <a
                   class="text-slate-400 dark:text-slate-500 secondary-btn prominant py-2 hidden md:block"
+                  href="/support"
+                >
+                  Support
+                </a>
+              </li>
+
+              <li>
+                <a
+                  class="text-slate-400 dark:text-slate-500 secondary-btn prominant py-2 hidden md:block"
                   href="/blog"
                 >
                   Blog
                 </a>
               </li>
+
               <li>
                 <a
                   id="download"
@@ -182,6 +224,12 @@ function scrollToSection(sectionID: string) {
                 <h1 class="font-bold text-slate-500 dark:text-slate-300">
                   Support
                 </h1>
+                <a
+                  class="text-slate-400 dark:text-slate-500 secondary-btn hidden md:block"
+                  href="/support"
+                >
+                  Help
+                </a>
                 <a
                   href="mailto: feedback@theathena.app"
                   class="text-slate-400 dark:text-slate-500 secondary-btn"
