@@ -1,25 +1,84 @@
 ---
 interface Props {
   title: string;
+  image: string;
 }
 
-const { title } = Astro.props;
+const { title, image } = Astro.props;
+
+function scrollToSection(sectionID: string) {
+  const element = document.getElementById(sectionID);
+
+  if (element) {
+    element.scrollIntoView({ behavior: "smooth" });
+  } else {
+    // Navigate to home
+  }
+}
 ---
 
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- HTML Meta Tags -->
+    <title>Athena - Your versatile AI assistant for Mac and iOS</title>
     <meta
       name="description"
       content="Athena is a powerful AI-powered, privacy-centric chat app for iOS devices and Mac that offers offline mode, multiple conversations and an intuitive user interface."
+    />
+    <meta name="author" content="Athena AI Ltd" />
+
+    <!-- Google / Search Engine Tags -->
+    <meta
+      itemprop="name"
+      content="Athena - Your versatile AI assistant for Mac and iOS"
     />
     <meta
       name="keywords"
       content="Athena, Athena App, The Athena App, ChatGPT, AI chat, iOS app, Mac app, iPhone, iPad, Mac, Apple, Native app"
     />
-    <meta name="image" content="https://theathena.app/static/MetaImage.jpeg" />
+    <meta
+      itemprop="description"
+      content="Athena is a powerful AI-powered, privacy-centric chat app for iOS devices and Mac that offers offline mode, multiple conversations and an intuitive user interface."
+    />
+    <meta
+      itemprop="image"
+      content={image}
+    />
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="http://theathena.app" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Athena - Your versatile AI assistant for Mac and iOS"
+    />
+    <meta
+      property="og:description"
+      content="Athena is a powerful AI-powered, privacy-centric chat app for iOS devices and Mac that offers offline mode, multiple conversations and an intuitive user interface."
+    />
+    <meta
+      property="og:image"
+      content={image}
+    />
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Athena - Your versatile AI assistant for Mac and iOS"
+    />
+    <meta
+      name="twitter:description"
+      content="Athena is a powerful AI-powered, privacy-centric chat app for iOS devices and Mac that offers offline mode, multiple conversations and an intuitive user interface."
+    />
+    <meta
+      name="twitter:image"
+      content={image}
+    />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Athena AI Ltd" />
     <meta
       http-equiv="Cache-Control"
@@ -28,29 +87,27 @@ const { title } = Astro.props;
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
 
-    <!-- <link href="dist/output.css" rel="stylesheet" /> -->
     <link rel="icon" type="image/x-icon" href="static/icon.png" />
+
+    <title>{title}</title>
 
     <style>
       .secondary-btn {
-      cursor: pointer;
-      display: block;
-      /* padding: 4px 10px; */
-    }
-    .secondary-btn:hover {
-      /* text-decoration: underline; */
-      border-radius: 6px;
-      /* background-color: #eeeeee; */
-      color: #03aedc;
-      transition-property: color, background-color;
-      transition-duration: 0.3s;
-    }
+        cursor: pointer;
+        display: block;
+        /* padding: 4px 10px; */
+      }
+      .secondary-btn:hover {
+        /* text-decoration: underline; */
+        border-radius: 6px;
+        /* background-color: #eeeeee; */
+        color: #03aedc;
+        transition-property: color, background-color;
+        transition-duration: 0.3s;
+      }
     </style>
-
-    <title>{title}</title>
   </head>
 
-  
   <body class="text-black bg-egg dark:bg-carbon dark:text-white">
     <div>
       <div class="flex justify-center">
@@ -83,11 +140,10 @@ const { title } = Astro.props;
         <slot />
       </main>
 
-      <footer>
-        <div class="flex justify-center bg-white dark:bg-deepGrey w-screen">
+      <footer class="bg-white dark:bg-deepGrey w-screen">
+        <div class="flex justify-center">
           <div class="container p-8 pb-4 max-w-4xl">
             <div class="grid gap-8 grid-cols-2 md:grid-cols-4">
-    
               <div class="space-y-1">
                 <h1 class="font-bold text-slate-500 dark:text-slate-300">
                   Products
@@ -114,7 +170,7 @@ const { title } = Astro.props;
                   Athena for iPad
                 </a>
               </div>
-      
+
               <div class="space-y-1">
                 <h1 class="font-bold text-slate-500 dark:text-slate-300">
                   Support
@@ -132,7 +188,7 @@ const { title } = Astro.props;
                   Request feature
                 </a>
               </div>
-      
+
               <div class="space-y-1">
                 <h1 class="font-bold text-slate-500 dark:text-slate-300">
                   News
@@ -173,7 +229,7 @@ const { title } = Astro.props;
                   LinkedIn
                 </a>
               </div>
-      
+
               <div class="space-y-1">
                 <h1 class="font-bold text-slate-500 dark:text-slate-300">
                   Company
@@ -201,14 +257,11 @@ const { title } = Astro.props;
                 </a>
               </div>
             </div>
-      
+
             <div class="flex justify-center mt-16">
-              <img
-                src="/logo-small-1.svg"
-                class="h-6"
-              />
+              <img src="/logo-small-1.svg" class="h-6" />
             </div>
-      
+
             <div class="text-center m-2">
               <p>
                 <a
@@ -220,7 +273,6 @@ const { title } = Astro.props;
                 </a>
               </p>
             </div>
-    
           </div>
         </div>
       </footer>
