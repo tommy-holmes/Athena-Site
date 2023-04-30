@@ -6,6 +6,102 @@ const posts = await getPosts();
 ---
 
 <Layout title="Athena">
+  <style>
+    :root {
+      --sans-serif: ui-rounded, -apple-system, BlinkMacSystemFont, "Open Sans",
+        "Segoe UI", Roboto, Ubuntu, sans-serif;
+      font-family: var(--sans-serif);
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    p {
+      opacity: 0.8;
+    }
+    #download {
+      cursor: pointer;
+    }
+    #btn {
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    #demoVideo {
+      display: none;
+    }
+    .secondary-btn {
+      cursor: pointer;
+      display: block;
+      /* padding: 4px 10px; */
+    }
+    .secondary-btn:hover {
+      /* text-decoration: underline; */
+      border-radius: 6px;
+      /* background-color: #eeeeee; */
+      color: #03aedc;
+      transition-property: color, background-color;
+      transition-duration: 0.3s;
+    }
+    .hiddenMobile {
+      display: none;
+    }
+    .cta {
+      background-color: #eeeeee;
+    }
+    .watch {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: #03aedc;
+    }
+    .watch:hover {
+      border-radius: 6px;
+      background-color: #eeeeee;
+      transition-property: color, background-color;
+      transition-duration: 0.3s;
+    }
+    .tile {
+      background-color: white;
+      padding: 1.5rem;
+      border-radius: 1rem;
+    }
+    @media (min-width: 768px) {
+      .icon {
+        transition: transform 0.1s ease-out;
+        cursor: pointer;
+      }
+      .icon:hover {
+        transform: scale(1.08);
+      }
+      .hiddenMobile {
+        display: block;
+      }
+    }
+    @media (prefers-color-scheme: dark) {
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      p {
+        opacity: 0.9;
+      }
+      .watch:hover {
+        background-color: rgb(27, 31, 32);
+      }
+      /* .secondary-btn:hover {
+         background-color: rgb(27, 31, 32);
+       } */
+      .cta {
+        background-color: rgb(27, 31, 32);
+      }
+      .tile {
+        background-color: #1f2529;
+      }
+    }
+  </style>
+
   <section class="mt-28">
     <div class="text-center">
       <h1 class="text-7xl font-bold mb-2">Meet Athena</h1>
@@ -21,7 +117,7 @@ const posts = await getPosts();
         id="btn"
         class="font-semibold watch md:pl-6 md:pr-6 md:py-1"
       >
-        <img src="public/play.svg" class="max-h-8 mr-1" />
+        <img src="/play.svg" class="max-h-8 mr-1" />
         Watch introduction video
       </a>
     </div>
@@ -32,7 +128,7 @@ const posts = await getPosts();
         loop
         controls
         muted
-        src="public/Athena iOS Demo.mov"
+        src="/Athena iOS Demo.mov"
       ></video>
     </div>
   </section>
@@ -40,22 +136,22 @@ const posts = await getPosts();
   <section>
     <div class="justify-center hiddenMobile mt-28 space-y-4 flex space-x-4">
       <img
-        src="public/X Device - Hero 1 - Light.png"
+        src="/X Device - Hero 1 - Light.png"
         class="w-7/8 dark:hidden"
       />
       <img
-        src="public/X Device - Hero 1 - Dark.png"
+        src="/X Device - Hero 1 - Dark.png"
         class="w-7/8 hidden dark:block"
       />
     </div>
 
     <div class="justify-center md:hidden mt-28 space-y-4">
       <img
-        src="public/iOS - Hero 1 - Light.png"
+        src="/iOS - Hero 1 - Light.png"
         class="w-7/8 dark:hidden"
       />
       <img
-        src="public/iOS - Hero 1 - Dark.png"
+        src="/iOS - Hero 1 - Dark.png"
         class="w-7/8 hidden dark:block"
       />
     </div>
@@ -76,7 +172,7 @@ const posts = await getPosts();
       <div class="grid grid-cols-1 mt-10 md:grid-cols-2 max-w-5xl lg:grid-cols-4 gap-4">
         <div class="feature tile">
           <div class="flex justify-center">
-            <img src="public/phone.svg" class="h-16 m-1 mb-8" />
+            <img src="/phone.svg" class="h-16 m-1 mb-8" />
           </div>
           <h3 class="text-2xl font-semibold mb-2">Native</h3>
           <p>
@@ -86,7 +182,7 @@ const posts = await getPosts();
         </div>
         <div class="feature tile">
           <div class="flex justify-center">
-            <img src="public/lock.svg" class="h-16 m-1 mb-8" />
+            <img src="/lock.svg" class="h-16 m-1 mb-8" />
           </div>
           <h3 class="text-2xl font-semibold mb-2">Private</h3>
           <p>
@@ -97,7 +193,7 @@ const posts = await getPosts();
         <div class="feature tile">
           <div class="flex justify-center">
             <img
-              src="public/instruments.svg"
+              src="/instruments.svg"
               class="h-16 m-1 mb-8"
             />
           </div>
@@ -109,7 +205,7 @@ const posts = await getPosts();
         </div>
         <div class="feature tile">
           <div class="flex justify-center">
-            <img src="public/bulb.svg" class="h-16 m-1 mb-8" />
+            <img src="/bulb.svg" class="h-16 m-1 mb-8" />
           </div>
           <h3 class="text-2xl font-semibold mb-2">Prompt tips</h3>
           <p>
@@ -120,7 +216,7 @@ const posts = await getPosts();
 
         <div class="feature tile">
           <div class="flex justify-center">
-            <img src="public/cpu.svg" class="h-16 m-1 mb-8" />
+            <img src="/cpu.svg" class="h-16 m-1 mb-8" />
           </div>
           <h3 class="text-2xl font-semibold mb-2">
             Offline mode
@@ -132,14 +228,14 @@ const posts = await getPosts();
         </div>
         <div class="feature tile">
           <div class="flex justify-center">
-            <img src="public/text.svg" class="h-16 m-1 mb-8" />
+            <img src="/text.svg" class="h-16 m-1 mb-8" />
           </div>
           <h3 class="text-2xl font-semibold mb-2">Markdown</h3>
           <p>Response text is richly formatted with markdown.</p>
         </div>
         <div class="feature tile">
           <div class="flex justify-center">
-            <img src="public/moon.svg" class="h-16 m-1 mb-8" />
+            <img src="/moon.svg" class="h-16 m-1 mb-8" />
           </div>
           <h3 class="text-2xl font-semibold mb-2">Dark mode</h3>
           <p>
@@ -149,7 +245,7 @@ const posts = await getPosts();
         </div>
         <div class="feature tile">
           <div class="flex justify-center">
-            <img src="public/chats.svg" class="h-16 m-1 mb-8" />
+            <img src="/chats.svg" class="h-16 m-1 mb-8" />
           </div>
           <h3 class="text-2xl font-semibold mb-2">
             Multiple topics
@@ -331,7 +427,7 @@ const posts = await getPosts();
                 href="https://docs.google.com/forms/d/e/1FAIpQLSf83PDgOX2jfuqIyxMANd5WrVrxkoEfY1B_XQqAr5wgzt48cg/viewform?usp=sf_link"
               >
                 <img
-                  src="public/icon.png"
+                  src="/icon.png"
                   class="icon max-h-28 mb-6 rounded-3xl"
                 />
               </a>
@@ -347,10 +443,10 @@ const posts = await getPosts();
 
             <div class="mt-8 space-y-2">
               {/* <div class="flex justify-center">
-          <a href=""><img class="w-48" src="public/appstore.svg" alt="Get on the App Store"></a>
+          <a href=""><img class="w-48" src="/appstore.svg" alt="Get on the App Store"></a>
         </div>
         <div class="flex justify-center">
-          <a href="https://testflight.apple.com/join/6CTjDWXw"><img class="w-48" src="public/testflight.svg" alt="Join the TestFlight"></a>
+          <a href="https://testflight.apple.com/join/6CTjDWXw"><img class="w-48" src="/testflight.svg" alt="Join the TestFlight"></a>
         </div> */}
 
               <div class="flex justify-center">
@@ -375,7 +471,7 @@ const posts = await getPosts();
                 href="https://docs.google.com/forms/d/e/1FAIpQLSf83PDgOX2jfuqIyxMANd5WrVrxkoEfY1B_XQqAr5wgzt48cg/viewform?usp=sf_link"
               >
                 <img
-                  src="public/icon.png"
+                  src="/icon.png"
                   class="icon max-h-28 mb-6 rounded-3xl"
                 />
               </a>
@@ -389,10 +485,10 @@ const posts = await getPosts();
 
             <div class="mt-8 space-y-2 md:absolute md:inset-x-0 md:bottom-6">
               {/* <div class="flex justify-center">
-          <a href=""><img class="w-48" src="public/appstore.svg" alt="Get on the App Store"></a>
+          <a href=""><img class="w-48" src="/appstore.svg" alt="Get on the App Store"></a>
         </div>
         <div class="flex justify-center">
-          <a href="https://testflight.apple.com/join/6CTjDWXw"><img class="w-48" src="public/testflight.svg" alt="Join the TestFlight"></a>
+          <a href="https://testflight.apple.com/join/6CTjDWXw"><img class="w-48" src="/testflight.svg" alt="Join the TestFlight"></a>
         </div> */}
 
               <div class="flex justify-center">
@@ -417,7 +513,7 @@ const posts = await getPosts();
                 href="https://docs.google.com/forms/d/e/1FAIpQLSf83PDgOX2jfuqIyxMANd5WrVrxkoEfY1B_XQqAr5wgzt48cg/viewform?usp=sf_link"
               >
                 <img
-                  src="public/icon.png"
+                  src="/icon.png"
                   class="icon max-h-28 mb-6 rounded-3xl"
                 />
               </a>
@@ -433,10 +529,10 @@ const posts = await getPosts();
 
             <div class="mt-8 space-y-2 md:absolute md:inset-x-0 md:bottom-6">
               {/* <div class="flex justify-center">
-          <a href=""><img class="w-48" src="public/appstore.svg" alt="Get on the App Store"></a>
+          <a href=""><img class="w-48" src="/appstore.svg" alt="Get on the App Store"></a>
         </div>
         <div class="flex justify-center">
-          <a href="https://testflight.apple.com/join/6CTjDWXw"><img class="w-48" src="public/testflight.svg" alt="Join the TestFlight"></a>
+          <a href="https://testflight.apple.com/join/6CTjDWXw"><img class="w-48" src="/testflight.svg" alt="Join the TestFlight"></a>
         </div> */}
 
               <div class="flex justify-center">
@@ -479,7 +575,7 @@ const posts = await getPosts();
         >
           Twitter
           <img
-            src="public/chevron.right.svg"
+            src="/chevron.right.svg"
             class="max-h-8 ml-2"
           />
         </a>
@@ -492,7 +588,7 @@ const posts = await getPosts();
         >
           Mastodon
           <img
-            src="public/chevron.right.svg"
+            src="/chevron.right.svg"
             class="max-h-8 ml-2"
           />
         </a>
@@ -504,7 +600,7 @@ const posts = await getPosts();
         >
           YouTube
           <img
-            src="public/chevron.right.svg"
+            src="/chevron.right.svg"
             class="max-h-8 ml-2"
           />
         </a>
@@ -631,7 +727,7 @@ const posts = await getPosts();
 
       <div class="flex justify-center mt-16">
         <img
-          src="public/logo-small-1.svg"
+          src="/logo-small-1.svg"
           class="h-6"
         />
       </div>
