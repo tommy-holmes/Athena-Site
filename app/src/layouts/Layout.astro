@@ -42,10 +42,7 @@ function scrollToSection(sectionID: string) {
       itemprop="description"
       content="Athena is a powerful AI-powered, privacy-centric chat app for iOS devices and Mac that offers offline mode, multiple conversations and an intuitive user interface."
     />
-    <meta
-      itemprop="image"
-      content={image}
-    />
+    <meta itemprop="image" content={image} />
 
     <!-- Facebook Meta Tags -->
     <meta property="og:url" content="http://theathena.app" />
@@ -58,10 +55,7 @@ function scrollToSection(sectionID: string) {
       property="og:description"
       content="Athena is a powerful AI-powered, privacy-centric chat app for iOS devices and Mac that offers offline mode, multiple conversations and an intuitive user interface."
     />
-    <meta
-      property="og:image"
-      content={image}
-    />
+    <meta property="og:image" content={image} />
 
     <!-- Twitter Meta Tags -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -73,12 +67,9 @@ function scrollToSection(sectionID: string) {
       name="twitter:description"
       content="Athena is a powerful AI-powered, privacy-centric chat app for iOS devices and Mac that offers offline mode, multiple conversations and an intuitive user interface."
     />
-    <meta
-      name="twitter:image"
-      content={image}
-    />
+    <meta name="twitter:image" content={image} />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Athena AI Ltd" />
     <meta
       http-equiv="Cache-Control"
@@ -95,15 +86,23 @@ function scrollToSection(sectionID: string) {
       .secondary-btn {
         cursor: pointer;
         display: block;
-        /* padding: 4px 10px; */
       }
       .secondary-btn:hover {
-        /* text-decoration: underline; */
         border-radius: 6px;
-        /* background-color: #eeeeee; */
         color: #03aedc;
         transition-property: color, background-color;
         transition-duration: 0.3s;
+      }
+      .prominant {
+        padding: 4px 10px;
+      }
+      .prominant:hover {
+        background-color: #eeeeee;
+      }
+      @media (prefers-color-scheme: dark) {
+        .prominant:hover {
+          background-color: rgb(27, 31, 32);
+        }
       }
     </style>
   </head>
@@ -122,6 +121,14 @@ function scrollToSection(sectionID: string) {
           </a>
           <nav>
             <ul class="items-center space-x-2 md:flex">
+              <li>
+                <a
+                  class="text-slate-400 dark:text-slate-500 secondary-btn prominant py-2"
+                  href="/blog"
+                >
+                  Blog
+                </a>
+              </li>
               <li>
                 <a
                   id="download"
