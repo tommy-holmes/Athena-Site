@@ -35,9 +35,25 @@ export async function getPost(slug: string): Promise<Post> {
 export interface Post {
   _type: "post";
   _createdAt: string;
-  title?: string;
+  title: string;
   slug: Slug;
-  excerpt?: string;
-  mainImage?: ImageAsset;
+  author: Author;
+  excerpt: string;
+  mainImage: ImageAsset;
+  categories: Category[];
   body: PortableTextBlock[];
+}
+
+export interface Author {
+  _type: "author";
+  name: string;
+  title: string;
+  slug: Slug;
+  image: ImageAsset;
+}
+
+export interface Category {
+  _type: "category";
+  name: string;
+  description: string;
 }

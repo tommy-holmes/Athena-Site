@@ -40,9 +40,9 @@ export default defineType({
       of: [{type: 'reference', to: {type: 'category'}}],
     }),
     defineField({
-      name: 'publishedAt',
-      title: 'Published at',
-      type: 'datetime',
+      name: 'excerpt',
+      title: 'Excerpt',
+      type: 'string',
     }),
     defineField({
       name: 'body',
