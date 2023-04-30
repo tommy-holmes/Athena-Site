@@ -22,11 +22,6 @@ import Layout from "../layouts/Layout.astro";
       transition-property: color, background-color;
       transition-duration: 0.3s;
     }
-    .tile {
-      background-color: white;
-      padding: 1.5rem;
-      border-radius: 1rem;
-    }
     @media (min-width: 768px) {
       .icon {
         transition: transform 0.1s ease-out;
@@ -39,9 +34,6 @@ import Layout from "../layouts/Layout.astro";
     @media (prefers-color-scheme: dark) {
       .watch:hover {
         background-color: rgb(27, 31, 32);
-      }
-      .tile {
-        background-color: #1f2529;
       }
     }
   </style>
@@ -229,7 +221,7 @@ import Layout from "../layouts/Layout.astro";
             other creative endeavors.
           </p>
         </div>
-        <div class="tile hiddenMobile">
+        <div class="tile hidden md:block">
           <p class="mt-0 font-bold mb-3 dark:text-white">
             I need a few facts and figures for a science project I am working
             on, can you help?
@@ -239,7 +231,7 @@ import Layout from "../layouts/Layout.astro";
             history, science, technology, and more.
           </p>
         </div>
-        <div class="tile hiddenMobile">
+        <div class="tile hidden md:block">
           <p class="mt-0 font-bold mb-3 dark:text-white">
             I have family staying and need to cook for 5 of them. Can you
             suggest a popular Italian recipe with the right quantities for 6
@@ -250,7 +242,7 @@ import Layout from "../layouts/Layout.astro";
             instructions, or anything else based on your preferences.
           </p>
         </div>
-        <div class="tile hiddenMobile">
+        <div class="tile hidden md:block">
           <p class="mt-0 font-bold mb-3 dark:text-white">
             I'm having trouble managing my expenses and saving money, can you
             give me advice on how to improve my personal financial situation?
@@ -280,7 +272,7 @@ import Layout from "../layouts/Layout.astro";
             specify the source and target languages, she will handle the rest.
           </p>
         </div>
-        <div class="tile hiddenMobile">
+        <div class="tile hidden md:block">
           <p class="mt-0 font-bold mb-3 dark:text-white">
             I'm planning a vacation to Europe and want to make it truly
             memorable, can you suggest some unique and unforgettable experiences
@@ -291,7 +283,7 @@ import Layout from "../layouts/Layout.astro";
             accommodations, and creating itineraries.
           </p>
         </div>
-        <div class="tile hiddenMobile">
+        <div class="tile hidden md:block">
           <p class="mt-0 font-bold mb-3 dark:text-white">
             I'm feeling unfulfilled in my current job and want to make a change,
             can you help me explore different career options that might be a
