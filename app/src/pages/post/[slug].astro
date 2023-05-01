@@ -29,7 +29,7 @@ const authorDetails: Author = await getAuthor(author._ref).then((author: Author)
 
 <Layout title={title} image={urlForImage(mainImage).url()}>
   <div class="mb-20 space-y-2">
-    <h1 class="text-5xl font-bold">{title}</h1>
+    <h1 class="text-5xl font-bold mb-2">{title}</h1>
 
     <h3 class="text-xl font-semibold text-slate-400 dark:text-slate-500">
       by <a target="_blank" class="hover:text-teal transition cursor-pointer" href={authorDetails.site}>{authorDetails.name}</a>

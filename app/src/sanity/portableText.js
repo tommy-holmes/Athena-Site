@@ -20,12 +20,12 @@ const customComponents = {
     },
     code: ({ value }) => {
       return `
-        <pre><code>${value.code}</code></pre>
+        <pre class="language-swift"><code>${value.code}</code></pre>
       `;
     },
   },
 };
 
-export function sanityPortableText(portabletext: any) {
+export function sanityPortableText(portabletext) {
   return portableTextToHtml(portabletext, customComponents);
 }
