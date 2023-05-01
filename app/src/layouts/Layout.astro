@@ -138,7 +138,7 @@ function scrollToSection(sectionID: string) {
     </style>
   </head>
 
-  <body class="text-black bg-egg dark:bg-carbon dark:text-white">
+  <body class="text-black bg-egg dark:bg-carbon dark:text-white text-center">
     <div>
       <div class="lg:grid">
         <header
@@ -184,14 +184,14 @@ function scrollToSection(sectionID: string) {
         </header>
       </div>
 
-      <main>
+      <main class="m-5 lg:m-20">
         <slot />
       </main>
 
       <footer class="bg-white dark:bg-grey w-screen">
         <div class="flex justify-center">
           <div class="container p-8 pb-4 max-w-4xl">
-            <div class="grid gap-8 grid-cols-2 md:grid-cols-4">
+            <div class="grid gap-8 grid-cols-2 text-start md:grid-cols-4">
               <div class="space-y-1">
                 <h1 class="font-bold text-slate-500 dark:text-slate-300">
                   Products
