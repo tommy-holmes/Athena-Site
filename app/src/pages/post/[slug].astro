@@ -3,6 +3,7 @@ import { useSanityClient } from "astro-sanity";
 import PortableText from "../../components/PortableText.astro";
 import { Post } from "../../utils/sanity";
 import Layout from "../../layouts/Layout.astro";
+import { urlForImage } from "../../sanity/urlForImage";
 
 export async function getStaticPaths() {
   const posts = await useSanityClient().fetch(`*[_type == "post"]`);
@@ -20,9 +21,10 @@ export async function getStaticPaths() {
 const { title, mainImage, body } = Astro.props;
 ---
 
-<Layout title={title} image={mainImage}>
-  <img src={mainImage} />
-
+<Layout title={title} image={urlForImage(mainImage).url()}>
   <h1 class="text-5xl font-bold mb-20">{title}</h1>
+
+  <img class="rounded-2xl" src={urlForImage(mainImage).url()} />
+  
   <PortableText portableText={body} />
 </Layout>
