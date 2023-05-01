@@ -25,6 +25,7 @@
   "devDependencies": {
     "@portabletext/types": "^2.0.2",
     "@sanity/types": "^3.7.1",
+    "@tailwindcss/typography": "^0.5.9",
     "eslint": "^8.6.0",
     "prettier": "^2.8.4",
     "rimraf": "^4.4.1",
