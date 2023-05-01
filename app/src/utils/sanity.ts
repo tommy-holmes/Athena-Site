@@ -32,12 +32,22 @@ export async function getPost(slug: string): Promise<Post> {
   );
 }
 
+export async function getAuthor(ref: string): Promise<Author> {
+  return await client.fetch(
+    groq`*[_type == "author" && _id == $ref][0]`,
+    {
+      ref,
+    }
+  );
+}
+
 export interface Post {
   _type: "post";
   _id: string;
   _createdAt: string;
   title: string;
   slug: Slug;
+  readTime: number;
   author: Author;
   excerpt: string;
   mainImage: ImageAsset;

@@ -1,19 +1,10 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import { urlForImage } from "../sanity/urlForImage";
+import { formatDate } from "../utils";
 import { getPosts } from "../utils/sanity";
 
 const posts = await getPosts();
-
-console.log(posts);
-
-function formatDate(dateString: string) {
-  const locale =
-    typeof navigator !== "undefined" ? navigator.language : "en-GB";
-  const date = new Date(dateString);
-
-  return new Intl.DateTimeFormat(locale).format(date);
-}
 ---
 
 <Layout title="The Athena Blog" image="">

@@ -32,6 +32,22 @@ export default defineType({
       options: {
         hotspot: true,
       },
+      fields: [
+        {
+          name: 'alt',
+          title: 'Alt',
+          type: 'string',
+        }
+      ]
+    }),
+    defineField({
+      name: 'readTime',
+      title: 'Read time',
+      type: 'number',
+      description: 'The number of minutes a typical reader would take to read the post.',
+      options: {
+        list: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+      }
     }),
     defineField({
       name: 'categories',
