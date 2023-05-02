@@ -82,6 +82,9 @@
       background-color: white;
     }
     @media (min-width: 768px) { 
+      iframe {
+        height: 90vh;
+      }
       .icon {
         transition: transform 0.1s ease-out;
         cursor: pointer;
@@ -153,7 +156,18 @@
         </div>
 
         <div id="demoVideo" style="display: none;">
-          <video autoplay loop controls muted src="static/Athena iOS Demo.mov"></video>
+          <div style="position:relative;">
+            <iframe
+            src="https://player.vimeo.com/video/823003136?h=e6fda42176&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" 
+            frameborder="0" 
+            allow="autoplay; fullscreen; picture-in-picture" 
+            allowfullscreen 
+            style="position:relative;top:0;left:0;width:100vw;" 
+            title="Athena Introduction"
+            >
+            </iframe>
+          </div>
+          <script src="https://player.vimeo.com/api/player.js"></script>
         </div>
       </section>
 
