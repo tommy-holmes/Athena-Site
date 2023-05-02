@@ -59,7 +59,7 @@ export interface Author {
   _type: "author";
   name: string;
   title: string;
-  site: URL;
+  url: URL;
   slug: Slug;
   image: ImageAsset;
 }
