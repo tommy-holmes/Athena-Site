@@ -20,7 +20,7 @@ const customComponents = {
     },
     code: ({ value }) => {
       return `
-        <pre class="language-swift"><code>${value.code}</code></pre>
+        <pre><code>${value.code}</code></pre>
       `;
     },
   },
