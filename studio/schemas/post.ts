@@ -9,6 +9,7 @@ export default defineType({
       name: 'title',
       title: 'Title',
       type: 'string',
+      validation: (Rule) => Rule.required(),
     }),
     defineField({
       name: 'slug',
@@ -18,17 +19,20 @@ export default defineType({
         source: 'title',
         maxLength: 96,
       },
+      validation: (Rule) => Rule.required(),
     }),
     defineField({
       name: 'author',
       title: 'Author',
       type: 'reference',
       to: {type: 'author'},
+      validation: (Rule) => Rule.required(),
     }),
     defineField({
       name: 'mainImage',
       title: 'Main image',
       type: 'image',
+      validation: (Rule) => Rule.required(),
       options: {
         hotspot: true,
       },
@@ -38,7 +42,7 @@ export default defineType({
           title: 'Alt',
           type: 'string',
         }
-      ]
+      ],
     }),
     defineField({
       name: 'readTime',
@@ -59,9 +63,17 @@ export default defineType({
       type: 'datetime',
     }),
     defineField({
+      name: 'excerpt',
+      title: 'Excerpt',
+      type: 'string',
+      description: 'A small paragraph outlining the content of the post.',
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
       name: 'body',
       title: 'Body',
       type: 'blockContent',
+      validation: (Rule) => Rule.required(),
     }),
   ],
 

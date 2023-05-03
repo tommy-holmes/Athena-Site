@@ -54,7 +54,10 @@ import Layout from "../layouts/Layout.astro";
     </div>
 
     <div id="demoVideo">
-      <video autoplay loop controls muted src="/Athena iOS Demo.mov"></video>
+      <video
+        controls
+        src="https://files.mastodon.online/media_attachments/files/110/299/818/208/276/167/original/7b58ab2ea4723832.mp4"
+      ></video>
     </div>
   </section>
 
@@ -300,7 +303,7 @@ import Layout from "../layouts/Layout.astro";
 
   <section id="downloadSection" class="mt-32 mb-20 flex justify-center">
     <div class="space-y-16 ml-5 mr-5">
-      <div >
+      <div>
         <h1 class="text-4xl font-bold mb-2">Sign up for the waitlist</h1>
         <div class="flex justify-center">
           <h1 class="text-lg ml-5 mr-5 md:w-2/3">
@@ -314,7 +317,7 @@ import Layout from "../layouts/Layout.astro";
       <div
         class="grid grid-cols-1 gap-1 mx-4 mt-8 md:pl-20 md:pr-20 space-y-4 md:grid-cols-3 md:space-x-4 md:space-y-0"
       >
-        <div class=" tile min-h-min">
+        <div class="tile min-h-min">
           <div class="pl-8 pr-8">
             <div class="flex justify-center">
               <a
@@ -355,7 +358,7 @@ import Layout from "../layouts/Layout.astro";
           </div>
         </div>
 
-        <div class=" tile min-h-min md:relative dark:dark-tile">
+        <div class="tile min-h-min md:relative dark:dark-tile">
           <div class="pl-8 pr-8">
             <div class="flex justify-center">
               <a
@@ -396,7 +399,7 @@ import Layout from "../layouts/Layout.astro";
           </div>
         </div>
 
-        <div class=" tile min-h-min md:relative dark:dark-tile">
+        <div class="tile min-h-min md:relative dark:dark-tile">
           <div class="pl-8 pr-8">
             <div class="flex justify-center">
               <a
@@ -440,7 +443,7 @@ import Layout from "../layouts/Layout.astro";
     </div>
   </section>
 
-  <section id="socials" class="mt-32 mb-32 ">
+  <section id="socials" class="mt-32 mb-32">
     <h1 class="text-4xl font-bold mb-2">Follow Athena's journey</h1>
     <div class="flex justify-center">
       <h1 class="text-lg w-3/4 md:w-2/3">
@@ -485,4 +488,19 @@ import Layout from "../layouts/Layout.astro";
       </div>
     </div>
   </section>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      "client:only";
+      const video = document.getElementById("demoVideo");
+      const button = document.getElementById("play");
+
+      if (button && video) {
+        button.addEventListener("click", () => {
+          button.style.display = "none";
+          video.style.display = "block";
+        });
+      }
+    });
+  </script>
 </Layout>
