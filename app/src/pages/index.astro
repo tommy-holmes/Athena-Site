@@ -1,0 +1,506 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout
+  title="Athena - Your versatile AI assistant for Mac and iOS"
+  image="http://theathena.app/static/site-meta-img.jpg"
+>
+  <style>
+    #demoVideo {
+      display: none;
+    }
+    .watch {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: #03aedc;
+    }
+    .watch:hover {
+      border-radius: 6px;
+      background-color: #eeeeee;
+      transition-property: color, background-color;
+      transition-duration: 0.3s;
+    }
+    @media (min-width: 768px) {
+      .icon {
+        transition: transform 0.1s ease-out;
+        cursor: pointer;
+      }
+      .icon:hover {
+        transform: scale(1.08);
+      }
+    }
+    @media (prefers-color-scheme: dark) {
+      .watch:hover {
+        background-color: rgb(27, 31, 32);
+      }
+    }
+  </style>
+
+  <section class="mt-28">
+    <div>
+      <h1 class="text-7xl font-bold mb-2">Meet Athena</h1>
+      <h1 class="text-2xl">Elevate your AI experience on iOS and Mac</h1>
+    </div>
+  </section>
+
+  <section id="demoSection" class="mt-12 flex justify-center">
+    <div id="play" class="watch text-teal text-2xl">
+      <a id="btn" class="font-semibold watch md:pl-6 md:pr-6 md:py-1">
+        <img src="/play.svg" class="max-h-8 mr-1" />
+        Watch introduction video
+      </a>
+    </div>
+
+    <div id="demoVideo">
+      <video
+        controls
+        src="https://files.mastodon.online/media_attachments/files/110/299/818/208/276/167/original/7b58ab2ea4723832.mp4"
+      ></video>
+    </div>
+  </section>
+
+  <section>
+    <div class="justify-center hidden md:block mt-28">
+      <img src="/X Device - Hero 1 - Light.png" class="w-7/8 dark:hidden" />
+      <img
+        src="/X Device - Hero 1 - Dark.png"
+        class="w-7/8 hidden dark:block"
+      />
+    </div>
+
+    <div class="justify-center md:hidden mt-28">
+      <img src="/iOS - Hero 1 - Light.png" class="w-7/8 dark:hidden" />
+      <img src="/iOS - Hero 1 - Dark.png" class="w-7/8 hidden dark:block" />
+    </div>
+  </section>
+
+  <section id="featuresSection" class="mt-32">
+    <h2 class="text-4xl font-bold mb-2">More than a pretty (inter)face</h2>
+    <div class="flex justify-center">
+      <h1 class="text-lg md:w-2/3">
+        Explore the features behind Athena's best-in-class AI experience that
+        sets it apart from the rest.
+      </h1>
+    </div>
+
+    <div class="flex justify-center md:px-20">
+      <div
+        class="grid grid-cols-1 mt-10 md:grid-cols-2 max-w-5xl lg:grid-cols-4 gap-4"
+      >
+        <div class="feature tile">
+          <div class="flex justify-center">
+            <img src="/phone.svg" class="h-16 m-1 mb-8" />
+          </div>
+          <h3 class="text-2xl font-semibold mb-2">Native</h3>
+          <p>
+            Glide through smooth navigation and familiar gestures for a
+            top-notch user experience.
+          </p>
+        </div>
+        <div class="feature tile">
+          <div class="flex justify-center">
+            <img src="/lock.svg" class="h-16 m-1 mb-8" />
+          </div>
+          <h3 class="text-2xl font-semibold mb-2">Private</h3>
+          <p>
+            Our privacy-centric app safeguards your personal data, ensuring it
+            remains on your device.
+          </p>
+        </div>
+        <div class="feature tile">
+          <div class="flex justify-center">
+            <img src="/instruments.svg" class="h-16 m-1 mb-8" />
+          </div>
+          <h3 class="text-2xl font-semibold mb-2">Accessible</h3>
+          <p>
+            Resizable text, dictation, haptic feedback, and sound chimes make
+            for an accessible experience.
+          </p>
+        </div>
+        <div class="feature tile">
+          <div class="flex justify-center">
+            <img src="/bulb.svg" class="h-16 m-1 mb-8" />
+          </div>
+          <h3 class="text-2xl font-semibold mb-2">Prompt tips</h3>
+          <p>
+            Discover inspiring, well-crafted prompts for optimal, tailored
+            responses.
+          </p>
+        </div>
+
+        <div class="feature tile">
+          <div class="flex justify-center">
+            <img src="/cpu.svg" class="h-16 m-1 mb-8" />
+          </div>
+          <h3 class="text-2xl font-semibold mb-2">Offline mode</h3>
+          <p>Easily browse your previous conversations even while offline.</p>
+        </div>
+        <div class="feature tile">
+          <div class="flex justify-center">
+            <img src="/text.svg" class="h-16 m-1 mb-8" />
+          </div>
+          <h3 class="text-2xl font-semibold mb-2">Markdown</h3>
+          <p>Response text is richly formatted with markdown.</p>
+        </div>
+        <div class="feature tile">
+          <div class="flex justify-center">
+            <img src="/moon.svg" class="h-16 m-1 mb-8" />
+          </div>
+          <h3 class="text-2xl font-semibold mb-2">Dark mode</h3>
+          <p>
+            Boost focus and safeguard your eyes with dark mode - perfect for
+            night owls or darker aesthetic lovers.
+          </p>
+        </div>
+        <div class="feature tile">
+          <div class="flex justify-center">
+            <img src="/chats.svg" class="h-16 m-1 mb-8" />
+          </div>
+          <h3 class="text-2xl font-semibold mb-2">Multiple topics</h3>
+          <p>
+            Effortlessly handle multiple topics simultaneously and retain
+            history on your device.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="m-10">
+      <h1 class="text-2xl font-bold mb-2">We're just getting started</h1>
+      <div class="flex justify-center">
+        <h1 class="text-md md:w-2/3">
+          We are dedicated to enhancing Athena, continually adding exciting
+          features to elevate your AI experience even further!
+        </h1>
+      </div>
+    </div>
+  </section>
+
+  <section class="mt-32 md:px-20">
+    <div>
+      <h2 class="text-4xl font-bold mb-2">Ask and you shall receive</h2>
+      <div class="flex justify-center">
+        <h1 class="text-lg md:w-2/3">
+          Your versatile AI assistant for information, advice, creativity, and
+          problem-solving across numerous topics and tasks. You need only
+          #AskAthena.
+        </h1>
+      </div>
+    </div>
+
+    <div class="flex justify-center">
+      <div
+        class="max-w-5xl mt-8 grid grid-cols-1 text-start md:grid-cols-2 gap-4 lg:place-content-center"
+      >
+        <div class="tile">
+          <p class="mt-0 font-semibold mb-3 dark:text-white">
+            I've been working on an essay for school, can you help me improve it
+            and make my writing more engaging?
+          </p>
+          <p class="mt-1 dark:text-slate-400 mb-0 col-span-2">
+            Athena can assist with writing or editing essays, articles, stories,
+            or other content.
+          </p>
+        </div>
+        <div class="tile">
+          <p class="mt-0 font-bold mb-3 dark:text-white">
+            I am currently learning Spanish, would you help me learn by having a
+            conversation with me in Spanish?
+          </p>
+          <p class="mt-1 dark:text-slate-400 mb-0 col-span-2">
+            You can ask Athena to put on an act as anything you would like and
+            she will respond as such.
+          </p>
+        </div>
+        <div class="tile">
+          <p class="mt-0 font-bold mb-3 dark:text-white">
+            I am writing a sci-fi book, could you help me come up with ideas for
+            characters?
+          </p>
+          <p class="mt-1 dark:text-slate-400 mb-0 col-span-2">
+            You can ask Athena to help generate ideas for projects, stories, or
+            other creative endeavors.
+          </p>
+        </div>
+        <div class="tile hidden md:block">
+          <p class="mt-0 font-bold mb-3 dark:text-white">
+            I need a few facts and figures for a science project I am working
+            on, can you help?
+          </p>
+          <p class="mt-1 dark:text-slate-400 mb-0 col-span-2">
+            Athena can provide information on a variety of topics, such as
+            history, science, technology, and more.
+          </p>
+        </div>
+        <div class="tile hidden md:block">
+          <p class="mt-0 font-bold mb-3 dark:text-white">
+            I have family staying and need to cook for 5 of them. Can you
+            suggest a popular Italian recipe with the right quantities for 6
+            adults?
+          </p>
+          <p class="mt-1 dark:text-slate-400 mb-0 col-span-2">
+            Athena can suggest books, movies, music, cooking recipes and
+            instructions, or anything else based on your preferences.
+          </p>
+        </div>
+        <div class="tile hidden md:block">
+          <p class="mt-0 font-bold mb-3 dark:text-white">
+            I'm having trouble managing my expenses and saving money, can you
+            give me advice on how to improve my personal financial situation?
+          </p>
+          <p class="mt-1 dark:text-slate-400 mb-0 col-span-2">
+            Athena can provide guidance on budgeting, saving, investing, and
+            managing finances.
+          </p>
+        </div>
+        <div class="tile">
+          <p class="mt-0 font-bold mb-3 dark:text-white">
+            Can you explain what this Python code does and how I can reimplement
+            it in Swift?
+          </p>
+          <p class="mt-1 dark:text-slate-400 mb-0 col-span-2">
+            Athena can be your coding copilot providing guidance on programming
+            concepts and helping with code debugging or optimization.
+          </p>
+        </div>
+        <div class="tile">
+          <p class="mt-0 font-bold mb-3 dark:text-white">
+            I have a book writtern in German, can you translate it to English
+            for me?
+          </p>
+          <p class="mt-1 dark:text-slate-400 mb-0 col-span-2">
+            You can provide Athena with the text you would like translated and
+            specify the source and target languages, she will handle the rest.
+          </p>
+        </div>
+        <div class="tile hidden md:block">
+          <p class="mt-0 font-bold mb-3 dark:text-white">
+            I'm planning a vacation to Europe and want to make it truly
+            memorable, can you suggest some unique and unforgettable experiences
+            I should include in my itinerary?
+          </p>
+          <p class="mt-1 dark:text-slate-400 mb-0 col-span-2">
+            Athena can help with researching destinations, finding
+            accommodations, and creating itineraries.
+          </p>
+        </div>
+        <div class="tile hidden md:block">
+          <p class="mt-0 font-bold mb-3 dark:text-white">
+            I'm feeling unfulfilled in my current job and want to make a change,
+            can you help me explore different career options that might be a
+            better fit for me?
+          </p>
+          <p class="mt-1 dark:text-slate-400 mb-0 col-span-2">
+            You can ask Athena and she can offer suggestions on career paths,
+            job hunting strategies, and interview preparation.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="downloadSection" class="mt-32 mb-20 flex justify-center">
+    <div class="space-y-16 ml-5 mr-5">
+      <div>
+        <h1 class="text-4xl font-bold mb-2">Sign up for the waitlist</h1>
+        <div class="flex justify-center">
+          <h1 class="text-lg ml-5 mr-5 md:w-2/3">
+            We can only take on a limited number of users for now, but for a
+            chance to be one of the first to get to use Athena sign up for the
+            waitlist.
+          </h1>
+        </div>
+      </div>
+
+      <div
+        class="grid grid-cols-1 gap-1 mx-4 mt-8 md:pl-20 md:pr-20 space-y-4 md:grid-cols-3 md:space-x-4 md:space-y-0"
+      >
+        <div class="tile min-h-min">
+          <div class="pl-8 pr-8">
+            <div class="flex justify-center">
+              <a
+                target="_blank"
+                href="https://docs.google.com/forms/d/e/1FAIpQLSf83PDgOX2jfuqIyxMANd5WrVrxkoEfY1B_XQqAr5wgzt48cg/viewform?usp=sf_link"
+              >
+                <img src="/icon.png" class="icon max-h-28 mb-6 rounded-3xl" />
+              </a>
+            </div>
+
+            <div class="space-y-2">
+              <h3 class="text-xl font-bold">Mac</h3>
+
+              <p class="dark:text-slate-400">macOS 13.0 or later</p>
+            </div>
+
+            <div class="mt-8 space-y-2">
+              {
+                /* <div class="flex justify-center">
+          <a href=""><img class="w-48" src="/appstore.svg" alt="Get on the App Store"></a>
+        </div>
+        <div class="flex justify-center">
+          <a href="https://testflight.apple.com/join/6CTjDWXw"><img class="w-48" src="/testflight.svg" alt="Join the TestFlight"></a>
+        </div> */
+              }
+
+              <div class="flex justify-center">
+                <a
+                  target="_blank"
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSf83PDgOX2jfuqIyxMANd5WrVrxkoEfY1B_XQqAr5wgzt48cg/viewform?usp=sf_link"
+                  class="text-teal cta font-semibold p-2 px-4 rounded-lg"
+                  id="btn"
+                >
+                  Join the waitlist
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tile min-h-min md:relative dark:dark-tile">
+          <div class="pl-8 pr-8">
+            <div class="flex justify-center">
+              <a
+                target="_blank"
+                href="https://docs.google.com/forms/d/e/1FAIpQLSf83PDgOX2jfuqIyxMANd5WrVrxkoEfY1B_XQqAr5wgzt48cg/viewform?usp=sf_link"
+              >
+                <img src="/icon.png" class="icon max-h-28 mb-6 rounded-3xl" />
+              </a>
+            </div>
+
+            <div class="space-y-2">
+              <h3 class="text-xl font-bold">iPhone</h3>
+
+              <p class="dark:text-slate-400">iOS 16.0 or later</p>
+            </div>
+
+            <div class="mt-8 space-y-2 md:absolute md:inset-x-0 md:bottom-6">
+              {
+                /* <div class="flex justify-center">
+          <a href=""><img class="w-48" src="/appstore.svg" alt="Get on the App Store"></a>
+        </div>
+        <div class="flex justify-center">
+          <a href="https://testflight.apple.com/join/6CTjDWXw"><img class="w-48" src="/testflight.svg" alt="Join the TestFlight"></a>
+        </div> */
+              }
+
+              <div class="flex justify-center">
+                <a
+                  target="_blank"
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSf83PDgOX2jfuqIyxMANd5WrVrxkoEfY1B_XQqAr5wgzt48cg/viewform?usp=sf_link"
+                  class="text-teal cta font-semibold p-2 px-4 rounded-lg"
+                  id="btn"
+                >
+                  Join the waitlist
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tile min-h-min md:relative dark:dark-tile">
+          <div class="pl-8 pr-8">
+            <div class="flex justify-center">
+              <a
+                target="_blank"
+                href="https://docs.google.com/forms/d/e/1FAIpQLSf83PDgOX2jfuqIyxMANd5WrVrxkoEfY1B_XQqAr5wgzt48cg/viewform?usp=sf_link"
+              >
+                <img src="/icon.png" class="icon max-h-28 mb-6 rounded-3xl" />
+              </a>
+            </div>
+
+            <div class="space-y-2">
+              <h3 class="text-xl font-bold">iPad</h3>
+
+              <p class="dark:text-slate-400">iPadOS 16.1 or later</p>
+            </div>
+
+            <div class="mt-8 space-y-2 md:absolute md:inset-x-0 md:bottom-6">
+              {
+                /* <div class="flex justify-center">
+          <a href=""><img class="w-48" src="/appstore.svg" alt="Get on the App Store"></a>
+        </div>
+        <div class="flex justify-center">
+          <a href="https://testflight.apple.com/join/6CTjDWXw"><img class="w-48" src="/testflight.svg" alt="Join the TestFlight"></a>
+        </div> */
+              }
+
+              <div class="flex justify-center">
+                <a
+                  target="_blank"
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSf83PDgOX2jfuqIyxMANd5WrVrxkoEfY1B_XQqAr5wgzt48cg/viewform?usp=sf_link"
+                  class="text-teal cta font-semibold p-2 px-4 rounded-lg"
+                  id="btn"
+                >
+                  Join the waitlist
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="socials" class="mt-32 mb-32">
+    <h1 class="text-4xl font-bold mb-2">Follow Athena's journey</h1>
+    <div class="flex justify-center">
+      <h1 class="text-lg w-3/4 md:w-2/3">
+        Be in the loop and the first to know when exciting new features drop and
+        any other major updates by following Athena on social media.
+      </h1>
+    </div>
+
+    <div class="flex justify-center">
+      <div
+        class="grid grid-cols-2 max-w-4xl gap-2 md:gap-0 md:grid-cols-3 p-4 justify-center"
+      >
+        <a
+          target="_blank"
+          class="text-teal text-2xl font-semibold watch px-4 py-1"
+          href="https://twitter.com/TheAthenaApp"
+          id="btn"
+          style="align-items: center;"
+        >
+          Twitter
+          <img src="/chevron.right.svg" class="max-h-8 ml-2" />
+        </a>
+        <a
+          rel="me"
+          target="_blank"
+          class="text-teal text-2xl font-semibold watch px-4 py-1"
+          href="https://mastodon.online/@TheAthenaApp"
+          id="btn"
+        >
+          Mastodon
+          <img src="/chevron.right.svg" class="max-h-8 ml-2" />
+        </a>
+        <a
+          target="_blank"
+          class="text-teal col-span-2 md:col-span-1 text-2xl font-semibold watch px-4 py-1"
+          href="https://www.youtube.com/@TheAthenaApp"
+          id="btn"
+        >
+          YouTube
+          <img src="/chevron.right.svg" class="max-h-8 ml-2" />
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      "client:only";
+      const video = document.getElementById("demoVideo");
+      const button = document.getElementById("play");
+
+      if (button && video) {
+        button.addEventListener("click", () => {
+          button.style.display = "none";
+          video.style.display = "block";
+        });
+      }
+    });
+  </script>
+</Layout>

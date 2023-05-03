@@ -1,0 +1,342 @@
+---
+interface Props {
+  title: string;
+  image: string;
+}
+
+const { title, image } = Astro.props;
+
+function scrollToSection(sectionID: string) {
+  const element = document.getElementById(sectionID);
+
+  if (element) {
+    element.scrollIntoView({ behavior: "smooth" });
+  } else {
+    // Go to the app store
+  }
+}
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- HTML Meta Tags -->
+    <title>{title}</title>
+    <meta
+      name="description"
+      content="Athena is a powerful AI-powered, privacy-centric chat app for iOS devices and Mac that offers offline mode, multiple conversations and an intuitive user interface."
+    />
+    <meta name="author" content="Athena AI Ltd" />
+
+    <!-- Google / Search Engine Tags -->
+    <meta itemprop="name" content={title} />
+    <meta
+      name="keywords"
+      content="Athena, Athena App, The Athena App, ChatGPT, AI chat, iOS app, Mac app, iPhone, iPad, Mac, Apple, Native app"
+    />
+    <meta
+      itemprop="description"
+      content="Athena is a powerful AI-powered, privacy-centric chat app for iOS devices and Mac that offers offline mode, multiple conversations and an intuitive user interface."
+    />
+    <meta itemprop="image" content={image} />
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="http://theathena.app" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta
+      property="og:description"
+      content="Athena is a powerful AI-powered, privacy-centric chat app for iOS devices and Mac that offers offline mode, multiple conversations and an intuitive user interface."
+    />
+    <meta property="og:image" content={image} />
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta
+      name="twitter:description"
+      content="Athena is a powerful AI-powered, privacy-centric chat app for iOS devices and Mac that offers offline mode, multiple conversations and an intuitive user interface."
+    />
+    <meta name="twitter:image" content={image} />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Athena AI Ltd" />
+    <meta
+      http-equiv="Cache-Control"
+      content="no-cache, no-store, must-revalidate"
+    />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+
+    <link rel="icon" type="image/x-icon" href="static/icon.png" />
+
+    <style is:global>
+      :root {
+        --sans-serif: ui-rounded, -apple-system, BlinkMacSystemFont, "Open Sans",
+          "Segoe UI", Roboto, Ubuntu, sans-serif;
+        font-family: var(--sans-serif);
+      }
+      #download {
+        cursor: pointer;
+      }
+      #btn {
+        cursor: pointer;
+        white-space: nowrap;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      p {
+        opacity: 0.8;
+      }
+      .tile {
+        background-color: white;
+        padding: 1.5rem;
+        border-radius: 1rem;
+      }
+      .secondary-btn {
+        cursor: pointer;
+        display: block;
+      }
+      .secondary-btn:hover {
+        border-radius: 6px;
+        color: #03aedc;
+        transition-property: color, background-color;
+        transition-duration: 0.3s;
+      }
+      .prominant {
+        padding: 4px 10px;
+      }
+      .prominant:hover {
+        background-color: #eeeeee;
+      }
+      .cta {
+        background-color: #eeeeee;
+      }
+      @media (prefers-color-scheme: dark) {
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        p {
+          opacity: 0.9;
+        }
+        .tile {
+          background-color: #1f2529;
+        }
+        .prominant:hover {
+          background-color: rgb(27, 31, 32);
+        }
+        .cta {
+          background-color: rgb(27, 31, 32);
+        }
+      }
+    </style>
+  </head>
+
+  <body class="text-black bg-egg dark:bg-carbon dark:text-white text-center">
+    <div>
+      <div class="lg:grid">
+        <header
+          class="flex top-0 mx-auto p-5 mt-5 lg:gap-[40rem] justify-self-center max-w-5xl backdrop-blur bg-egg/90 dark:bg-carbon/90 z-10 items-center justify-between"
+        >
+          <a
+            href="../index.html"
+            class="text-slate-300 dark:text-slate-700 text-2xl font-bold hover:text-teal/70 transition"
+          >
+            Athena
+          </a>
+          <nav>
+            <ul class="items-center space-x-2 md:flex">
+              <li>
+                <a
+                  class="text-slate-400 dark:text-slate-500 secondary-btn prominant py-2 hidden md:block"
+                  href="/support"
+                >
+                  Support
+                </a>
+              </li>
+
+              <li>
+                <a
+                  class="text-slate-400 dark:text-slate-500 secondary-btn prominant py-2 hidden md:block"
+                  href="/blog"
+                >
+                  Blog
+                </a>
+              </li>
+
+              <li>
+                <a
+                  target="_blank"
+                  id="download"
+                  class="text-white font-semibold py-2 px-4 ml-4 rounded-full bg-teal"
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSf83PDgOX2jfuqIyxMANd5WrVrxkoEfY1B_XQqAr5wgzt48cg/viewform?usp=sf_link"
+                >
+                  Download
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </header>
+      </div>
+
+      <main class="m-10 lg:m-20">
+        <slot />
+      </main>
+
+      <footer class="bg-white dark:bg-grey w-screen">
+        <div class="flex justify-center">
+          <div class="container p-8 pb-4 max-w-4xl">
+            <div class="grid gap-8 grid-cols-2 text-start md:grid-cols-4">
+              <div class="space-y-1">
+                <h1 class="font-bold text-slate-500 dark:text-slate-300">
+                  Products
+                </h1>
+                <a
+                  target="_blank"
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSf83PDgOX2jfuqIyxMANd5WrVrxkoEfY1B_XQqAr5wgzt48cg/viewform?usp=sf_link"
+                  class="text-slate-400 dark:text-slate-500 secondary-btn"
+                >
+                  Athena for Mac
+                </a>
+                <a
+                  target="_blank"
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSf83PDgOX2jfuqIyxMANd5WrVrxkoEfY1B_XQqAr5wgzt48cg/viewform?usp=sf_link"
+                  class="text-slate-400 dark:text-slate-500 secondary-btn"
+                >
+                  Athena for iPhone
+                </a>
+                <a
+                  target="_blank"
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSf83PDgOX2jfuqIyxMANd5WrVrxkoEfY1B_XQqAr5wgzt48cg/viewform?usp=sf_link"
+                  class="text-slate-400 dark:text-slate-500 secondary-btn"
+                >
+                  Athena for iPad
+                </a>
+              </div>
+
+              <div class="space-y-1">
+                <h1 class="font-bold text-slate-500 dark:text-slate-300">
+                  Support
+                </h1>
+                <a
+                  class="text-slate-400 dark:text-slate-500 secondary-btn hidden md:block"
+                  href="/support"
+                >
+                  Help
+                </a>
+                <a
+                  href="mailto: feedback@theathena.app"
+                  class="text-slate-400 dark:text-slate-500 secondary-btn"
+                >
+                  Provide feedback
+                </a>
+                <a
+                  href="mailto: features@theathena.app"
+                  class="text-slate-400 dark:text-slate-500 secondary-btn"
+                >
+                  Request feature
+                </a>
+              </div>
+
+              <div class="space-y-1">
+                <h1 class="font-bold text-slate-500 dark:text-slate-300">
+                  News
+                </h1>
+                <a
+                  target="_blank"
+                  href="https://twitter.com/TheAthenaApp"
+                  class="text-slate-400 dark:text-slate-500 secondary-btn"
+                >
+                  Twitter
+                </a>
+                <a
+                  target="_blank"
+                  href="https://mastodon.online/@TheAthenaApp"
+                  class="text-slate-400 dark:text-slate-500 secondary-btn"
+                >
+                  Mastodon
+                </a>
+                <a
+                  target="_blank"
+                  href="https://www.youtube.com/@TheAthenaApp"
+                  class="text-slate-400 dark:text-slate-500 secondary-btn"
+                >
+                  YouTube
+                </a>
+                <a
+                  target="_blank"
+                  href="https://instagram.com/theathenaapp"
+                  class="text-slate-400 dark:text-slate-500 secondary-btn"
+                >
+                  Instagram
+                </a>
+                <a
+                  target="_blank"
+                  href="https://LinkedIn.com/company/theathenaapp"
+                  class="text-slate-400 dark:text-slate-500 secondary-btn"
+                >
+                  LinkedIn
+                </a>
+              </div>
+
+              <div class="space-y-1">
+                <h1 class="font-bold text-slate-500 dark:text-slate-300">
+                  Company
+                </h1>
+                <a
+                  href="/blog"
+                  class="text-slate-400 dark:text-slate-500 secondary-btn"
+                >
+                  Blog
+                </a>
+                <a
+                  target="_blank"
+                  href="https://github.com/tommy-holmes"
+                  class="text-slate-400 dark:text-slate-500 secondary-btn"
+                >
+                  Tom Holmes
+                </a>
+                <a
+                  target="_blank"
+                  href="https://benkau.com"
+                  class="text-slate-400 dark:text-slate-500 secondary-btn"
+                >
+                  Shaps Benkau
+                </a>
+                <a
+                  href="downloads/athena-presskit.zip"
+                  download
+                  class="text-slate-400 dark:text-slate-500 secondary-btn"
+                >
+                  Press Kit
+                </a>
+              </div>
+            </div>
+
+            <div class="flex justify-center mt-16">
+              <img src="/logo-small-1.svg" class="h-6" />
+            </div>
+
+            <div class="text-center m-2">
+              <p>
+                <a
+                  target="_blank"
+                  href="https://openai.com"
+                  class="text-sm text-slate-500"
+                >
+                  POWERED BY OPENAI'S CHATGPT
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

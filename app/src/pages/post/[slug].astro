@@ -1,0 +1,55 @@
+---
+import { useSanityClient } from "astro-sanity";
+import PortableText from "../../components/PortableText.astro";
+import { Author, Post, getAuthor } from "../../utils/sanity";
+import Layout from "../../layouts/Layout.astro";
+import { urlForImage } from "../../sanity/urlForImage";
+import { formatDate } from "../../utils";
+
+export async function getStaticPaths() {
+  const posts = await useSanityClient().fetch(`*[_type == "post"]`);
+
+  return posts.map((post: Post) => {
+    console.log(post.author);
+    return {
+      params: {
+        slug: post.slug?.current || "",
+      },
+      props: { ...post },
+    };
+  });
+}
+
+const { title, author, _createdAt, readTime, mainImage, body } = Astro.props;
+
+const authorDetails: Author = await getAuthor(author._ref).then(
+  (author: Author) => {
+    return author;
+  }
+);
+---
+
+<Layout title={title} image={urlForImage(mainImage).url()}>
+
+  <div class="mb-16 space-y-2">
+    <h1 class="text-5xl font-bold mb-2">{title}</h1>
+
+    <h3 class="text-xl font-semibold text-slate-400 dark:text-slate-500">
+      by <a
+        target="_blank"
+        class="hover:text-teal transition cursor-pointer"
+        href={authorDetails.url}>{authorDetails.name}</a
+      >
+    </h3>
+
+    <h5 class="text-xs text-slate-400 dark:text-slate-500">
+      {`${formatDate(_createdAt)} · ${readTime} minutes`}
+    </h5>
+  </div>
+
+  <div class="flex justify-center">
+    <img class="rounded-2xl max-h-[65vh]" src={urlForImage(mainImage).url()} />
+  </div>
+
+  <PortableText portableText={body} />
+</Layout>
