@@ -99,7 +99,6 @@ function scrollToSection(sectionID: string) {
       }
       .secondary-btn {
         cursor: pointer;
-        display: block;
       }
       .secondary-btn:hover {
         border-radius: 6px;
@@ -142,7 +141,7 @@ function scrollToSection(sectionID: string) {
     <div>
       <div class="lg:grid">
         <header
-          class="flex top-0 mx-auto p-5 mt-5 lg:gap-[40rem] justify-self-center max-w-5xl backdrop-blur bg-egg/90 dark:bg-carbon/90 z-10 items-center justify-between"
+          class="flex top-0 mx-auto p-2 md:p-5 mt-5 lg:gap-[40rem] justify-self-center max-w-5xl backdrop-blur bg-egg/90 dark:bg-carbon/90 z-10 items-center justify-between"
         >
           <a
             href="../index.html"
@@ -151,10 +150,10 @@ function scrollToSection(sectionID: string) {
             Athena
           </a>
           <nav>
-            <ul class="items-center space-x-2 md:flex">
+            <ul class="items-center text-sm md:text-base md:space-x-2 flex">
               <li>
                 <a
-                  class="text-slate-400 dark:text-slate-500 secondary-btn prominant py-2 hidden md:block"
+                  class="text-slate-400 dark:text-slate-500 secondary-btn py-2 prominant"
                   href="/support"
                 >
                   Support
@@ -163,7 +162,7 @@ function scrollToSection(sectionID: string) {
 
               <li>
                 <a
-                  class="text-slate-400 dark:text-slate-500 secondary-btn prominant py-2 hidden md:block"
+                  class="text-slate-400 dark:text-slate-500 secondary-btn py-2 prominant"
                   href="/blog"
                 >
                   Blog
@@ -174,7 +173,7 @@ function scrollToSection(sectionID: string) {
                 <a
                   target="_blank"
                   id="download"
-                  class="text-white font-semibold py-2 px-4 ml-4 rounded-full bg-teal"
+                  class="text-white font-semibold py-2 px-2 md:px-4 ml-2 md:ml-4 rounded-full bg-teal"
                   href="https://docs.google.com/forms/d/e/1FAIpQLSf83PDgOX2jfuqIyxMANd5WrVrxkoEfY1B_XQqAr5wgzt48cg/viewform?usp=sf_link"
                 >
                   Download
