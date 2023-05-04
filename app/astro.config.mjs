@@ -4,8 +4,6 @@ import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://tommy-holmes.github.io',
-  base: '/Athena-Site',
   integrations: [
     tailwind(),
     sanity({
