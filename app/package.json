@@ -1,6 +1,7 @@
 {
   "name": "app",
   "type": "module",
+  "homepage": "https://theathena.app",
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",

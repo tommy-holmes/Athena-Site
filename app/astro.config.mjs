@@ -4,8 +4,16 @@ import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
+  build: {
+    publicPath: "./public",
+  },
+  server: {
+    tailwindConfig: './tailwind.config.js',
+  },
   integrations: [
-    tailwind(),
+    tailwind({
+      applyBaseStyles: true,
+    }),
     sanity({
       projectId: 'kkdxagg1',
       dataset: 'production',
