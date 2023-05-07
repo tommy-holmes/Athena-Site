@@ -6,8 +6,7 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
   build: {
     format: "directory",
-    // assetsPrefix: "./", // comment this line for production builds
-    assetsPrefix: "https://theathena.app/", // comment this line for development builds
+    assetsPrefix: "https://theathena.app/", // COMMENT IN DEVELOPMENT
   },
   vite: {
     build: {
