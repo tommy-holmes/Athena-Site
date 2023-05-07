@@ -5,7 +5,18 @@ import tailwind from "@astrojs/tailwind";
 // https://astro.build/config
 export default defineConfig({
   build: {
-    publicPath: "./public",
+    format: "directory",
+    // assetsPrefix: "./", // comment this line for production builds
+    assetsPrefix: "https://theathena.app/", // comment this line for development builds
+  },
+  vite: {
+    build: {
+      rollupOptions: {
+        output: {
+          assetFileNames: "assets/asset.[hash][extname]",
+        }
+      }
+    }
   },
   server: {
     tailwindConfig: './tailwind.config.js',
