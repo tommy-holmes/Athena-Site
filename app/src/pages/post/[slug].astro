@@ -1,10 +1,10 @@
 ---
 import { useSanityClient } from "astro-sanity";
 import PortableText from "../../components/PortableText.astro";
-import { Author, Post, getAuthor } from "../../utils/sanity";
-import Layout from "../../layouts/Layout.astro";
+import { Author, Post, getAuthor, getPost } from "../../utils/sanity";
 import { urlForImage } from "../../sanity/urlForImage";
 import { formatDate } from "../../utils";
+import BlogPost from "../../layouts/BlogPost.astro";
 
 export async function getStaticPaths() {
   const posts = await useSanityClient().fetch(`*[_type == "post"]`);
@@ -20,7 +20,7 @@ export async function getStaticPaths() {
   });
 }
 
-const { title, author, _createdAt, readTime, mainImage, body } = Astro.props;
+const { title, author, _createdAt, readTime, mainImage, body, keywords, excerpt } = Astro.props;
 
 const authorDetails: Author = await getAuthor(author._ref).then(
   (author: Author) => {
@@ -29,9 +29,9 @@ const authorDetails: Author = await getAuthor(author._ref).then(
 );
 ---
 
-<Layout title={title} image={urlForImage(mainImage).url()}>
+<BlogPost title={title} mainImage={mainImage} keywords={keywords} excerpt={excerpt}>
 
-  <div class="mb-16 space-y-2">
+  <div class="mt-28 mb-16 space-y-2">
     <h1 class="text-5xl font-bold mb-2">{title}</h1>
 
     <h3 class="text-xl font-semibold text-slate-400 dark:text-slate-500">
@@ -48,8 +48,10 @@ const authorDetails: Author = await getAuthor(author._ref).then(
   </div>
 
   <div class="flex justify-center">
-    <img class="rounded-2xl max-h-[65vh]" src={urlForImage(mainImage).url()} />
+    <img class="md:rounded-2xl md:max-w-[75vw]" src={urlForImage(mainImage).url()} />
   </div>
 
-  <PortableText portableText={body} />
-</Layout>
+  <div class="mb-28">
+    <PortableText portableText={body} />
+  </div>
+</BlogPost>

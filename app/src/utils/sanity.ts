@@ -46,6 +46,7 @@ export interface Post {
   _id: string;
   _createdAt: string;
   title: string;
+  keywords: string,
   slug: Slug;
   readTime: number;
   author: Author;

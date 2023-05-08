@@ -22,6 +22,13 @@ export default defineType({
       validation: (Rule) => Rule.required(),
     }),
     defineField({
+      name: 'keywords',
+      title: 'Keywords',
+      type: 'string',
+      description: 'For SEO, choose about 5. EXCLUDE: Athena, Athena App, The Athena App, ChatGPT, AI chat, iOS app, Mac app, iPad app',
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
       name: 'author',
       title: 'Author',
       type: 'reference',
