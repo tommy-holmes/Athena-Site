@@ -23,7 +23,7 @@ export async function getStaticPaths() {
 const {
   title,
   author,
-  _createdAt,
+  publishedAt,
   readTime,
   mainImage,
   body,
@@ -57,7 +57,7 @@ const authorDetails: Author = await getAuthor(author._ref).then(
       </h3>
 
       <h5 class="text-xs text-slate-400 dark:text-slate-500">
-        {`${formatDate(_createdAt)} · ${readTime} minutes`}
+        {`${formatDate(publishedAt)} · ${readTime} minutes`}
       </h5>
     </div>
   </div>

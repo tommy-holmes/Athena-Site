@@ -49,6 +49,7 @@ export interface Post {
   keywords: string,
   slug: Slug;
   readTime: number;
+  publishedAt: string;
   author: Author;
   excerpt: string;
   mainImage: ImageAsset;
