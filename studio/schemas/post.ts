@@ -39,6 +39,7 @@ export default defineType({
       name: 'mainImage',
       title: 'Main image',
       type: 'image',
+      description: 'Ideally 16:9 aspect ratio',
       validation: (Rule) => Rule.required(),
       options: {
         hotspot: true,

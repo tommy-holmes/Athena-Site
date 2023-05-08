@@ -20,7 +20,16 @@ export async function getStaticPaths() {
   });
 }
 
-const { title, author, _createdAt, readTime, mainImage, body, keywords, excerpt } = Astro.props;
+const {
+  title,
+  author,
+  _createdAt,
+  readTime,
+  mainImage,
+  body,
+  keywords,
+  excerpt,
+} = Astro.props;
 
 const authorDetails: Author = await getAuthor(author._ref).then(
   (author: Author) => {
@@ -29,26 +38,35 @@ const authorDetails: Author = await getAuthor(author._ref).then(
 );
 ---
 
-<BlogPost title={title} mainImage={mainImage} keywords={keywords} excerpt={excerpt}>
+<BlogPost
+  title={title}
+  mainImage={mainImage}
+  keywords={keywords}
+  excerpt={excerpt}
+>
+  <div class="flex justify-center">
+    <div class="my-16 space-y-2 max-w-4xl">
+      <h1 class="text-5xl font-bold mb-4">{title}</h1>
 
-  <div class="mt-28 mb-16 space-y-2">
-    <h1 class="text-5xl font-bold mb-2">{title}</h1>
+      <h3 class="text-xl font-semibold text-slate-400 dark:text-slate-500">
+        by <a
+          target="_blank"
+          class="hover:text-teal transition cursor-pointer"
+          href={authorDetails.url}>{authorDetails.name}</a
+        >
+      </h3>
 
-    <h3 class="text-xl font-semibold text-slate-400 dark:text-slate-500">
-      by <a
-        target="_blank"
-        class="hover:text-teal transition cursor-pointer"
-        href={authorDetails.url}>{authorDetails.name}</a
-      >
-    </h3>
-
-    <h5 class="text-xs text-slate-400 dark:text-slate-500">
-      {`${formatDate(_createdAt)} · ${readTime} minutes`}
-    </h5>
+      <h5 class="text-xs text-slate-400 dark:text-slate-500">
+        {`${formatDate(_createdAt)} · ${readTime} minutes`}
+      </h5>
+    </div>
   </div>
 
   <div class="flex justify-center">
-    <img class="md:rounded-2xl md:max-w-[75vw]" src={urlForImage(mainImage).url()} />
+    <img
+      class="rounded-2xl object-fill w-[100vw] xl:max-w-5xl 2xl:max-w-7xl max-h-[75vh]"
+      src={urlForImage(mainImage).url()}
+    />
   </div>
 
   <div class="mb-28">

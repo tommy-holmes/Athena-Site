@@ -73,14 +73,9 @@ var { title, mainImage, keywords, excerpt } = Astro.props;
       h3,
       h4,
       h5,
-      p {
+      p,
+      ul {
         opacity: 0.8;
-      }
-      .prominant {
-        padding: 4px 10px;
-      }
-      .prominant:hover {
-        background-color: #eeeeee;
       }
       .secondary-btn {
         cursor: pointer;
@@ -92,6 +87,12 @@ var { title, mainImage, keywords, excerpt } = Astro.props;
         transition-property: color, background-color;
         transition-duration: 0.3s;
       }
+      .prominant {
+        padding: 4px 10px;
+      }
+      .prominant:hover {
+        background-color: #eeeeee;
+      }
 
       @media (prefers-color-scheme: dark) {
         h1,
@@ -99,12 +100,13 @@ var { title, mainImage, keywords, excerpt } = Astro.props;
         h3,
         h4,
         h5,
-        p {
+        p,
+        ul {
           opacity: 0.9;
         }
-      }
-      .prominant:hover {
-        background-color: rgb(27, 31, 32);
+        .prominant:hover {
+          background-color: rgb(27, 31, 32);
+        }
       }
     </style>
   </head>
