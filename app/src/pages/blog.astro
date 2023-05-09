@@ -2,7 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import { urlForImage } from "../sanity/urlForImage";
 import { formatDate } from "../utils";
-import { getPosts, getAuthor } from "../utils/sanity";
+import { getPosts } from "../utils/sanity";
 
 const posts = await getPosts();
 ---

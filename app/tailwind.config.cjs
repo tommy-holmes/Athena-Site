@@ -18,6 +18,11 @@ module.exports = {
 					color: '#03AEDC',
 				}
 			},
+      blockquote: {
+				code: {
+					color: '#03AEDC',
+				}
+			},
             "code::before": false,
             "code::after": false,
           },

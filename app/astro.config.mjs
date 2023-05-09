@@ -21,9 +21,7 @@ export default defineConfig({
     tailwindConfig: './tailwind.config.js',
   },
   integrations: [
-    tailwind({
-      applyBaseStyles: true,
-    }),
+    tailwind(),
     sanity({
       projectId: 'kkdxagg1',
       dataset: 'production',
