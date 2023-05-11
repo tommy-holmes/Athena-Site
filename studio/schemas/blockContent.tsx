@@ -1,4 +1,13 @@
+import React from 'react'
 import {defineType, defineArrayMember} from 'sanity'
+
+// const PromptIcon = () => (
+//   <span style={{'fontWeight': 'semibold'}}>Prompt</span>
+// )
+
+// const PromptDecorator = (props: any) => (
+//   <span style={{'backgroundColor': 'rgba(3, 174, 220, 0.3)', 'fontFamily': 'monospace'}}>{props.children}</span>
+// )
 
 /**
  * This is the schema definition for the rich text fields used for
@@ -41,7 +50,13 @@ export default defineType({
         decorators: [
           {title: 'Strong', value: 'strong'},
           {title: 'Emphasis', value: 'em'},
-          {title: `Code`, value: `code`},
+          {title: 'Code', value: 'code'},
+          // {
+          //   title: 'Prompt', 
+          //   value: 'prompt', 
+          //   icon: PromptIcon,
+          //   component: PromptDecorator
+          // },
         ],
         // Annotations can be any object structure – e.g. a link or a footnote.
         annotations: [
