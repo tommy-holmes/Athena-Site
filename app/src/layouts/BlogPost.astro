@@ -17,7 +17,7 @@ var { title, mainImage, keywords, excerpt } = Astro.props;
   <head>
     <meta charset="UTF-8" />
     <!-- HTML Meta Tags -->
-    <title>{title} | Athena</title>
+    <title>{title} | Athena Blog</title>
     <meta name="description" content={excerpt} />
     <meta name="author" content="Athena AI Ltd" />
 
@@ -32,11 +32,11 @@ var { title, mainImage, keywords, excerpt } = Astro.props;
     <meta itemprop="image" content={urlForImage(mainImage).url()} />
  
     <!-- Facebook Meta Tags -->
-    <meta property="og:url" content="http://theathena.app" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content={title += " | Athena"} />
-    <meta property="og:description" content={excerpt} />
-    <meta property="og:image" content={urlForImage(mainImage).url()} />
+    <meta name="url" property="og:url" content="http://theathena.app" />
+    <meta name="type" property="og:type" content="website" />
+    <meta name="title" property="og:title" content={title += " | Athena"} />
+    <meta name="description" property="og:description" content={excerpt} />
+    <meta name="image" property="og:image" content={urlForImage(mainImage).url()} />
 
     <!-- Twitter Meta Tags -->
     <meta name="twitter:card" content="summary_large_image" />
