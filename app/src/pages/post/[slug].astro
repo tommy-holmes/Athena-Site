@@ -29,6 +29,7 @@ const {
   body,
   keywords,
   excerpt,
+  slug,
 } = Astro.props;
 
 const authorDetails: Author = await getAuthor(author._ref).then(
@@ -43,6 +44,7 @@ const authorDetails: Author = await getAuthor(author._ref).then(
   mainImage={mainImage}
   keywords={keywords}
   excerpt={excerpt}
+  slug={slug}
 >
   <div class="flex justify-center">
     <div class="my-16 space-y-2 max-w-4xl">
