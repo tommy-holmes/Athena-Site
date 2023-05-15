@@ -2,9 +2,10 @@
 interface Props {
   title: string;
   image: string;
+  path: string;
 }
 
-const { title, image } = Astro.props;
+const { title, image, path } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -32,7 +33,7 @@ const { title, image } = Astro.props;
     <meta itemprop="image" content={image} />
 
     <!-- Facebook Meta Tags -->
-    <meta name="url" property="og:url" content="http://theathena.app" />
+    <meta name="url" property="og:url" content={"http://theathena.app" + path} />
     <meta name="type" property="og:type" content="website" />
     <meta name="title" property="og:title" content={title} />
     <meta
@@ -59,7 +60,8 @@ const { title, image } = Astro.props;
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
 
-    <link rel="icon" type="image/x-icon" href="static/icon.png" />
+    <link rel="icon" type="image/x-icon" href="/icon.png" />
+    <link rel="canonical" href={"http://theathena.app" + path} />
 
     <style is:global>
       :root {
